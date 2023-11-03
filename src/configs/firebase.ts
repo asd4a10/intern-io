@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase, onValue, ref, set } from "firebase/database";
+import { getDatabase, onValue, ref, set, child, get } from "firebase/database";
+import { ICompany } from "../types/ICompany.ts";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -21,21 +22,25 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+export const db = getDatabase();
+const companiesRef = ref(db, "companies");
 function writeCompanyData(companyId: number, name: string, link: string) {
-  const db = getDatabase();
-  const reference = ref(db, "companies/" + companyId);
-
-  set(reference, { name, link });
+  // const db = getDatabase();
+  // const reference = ref(db, "companies/" + companyId);
+  //
+  // set(reference, { name, link });
 }
 
-function getCompanyData() {
-  const db = getDatabase();
-  const companiesRef = ref(db, "companies");
-  onValue(companiesRef, (snapshot) => {
-    const data = snapshot.val();
-    return data;
+export const getCompanyData = async (
+  setData: React.Dispatch<React.SetStateAction<ICompany[]>>,
+) => {
+  let companies: ICompany[] = [];
+  onValue(companiesRef, async (snapshot) => {
+    companies = snapshot.val();
+    setData(snapshot.val());
+    console.log(companies);
   });
-  return companiesRef;
-}
+  return companies;
+};
 
-export { writeCompanyData, getCompanyData };
+export { writeCompanyData };
