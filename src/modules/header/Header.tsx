@@ -53,7 +53,12 @@ export default function Header() {
   };
 
   return (
-    <AppBar position="static" sx={{ backgroundColor: "#242424" }} elevation={0}>
+    <AppBar
+      color="secondary"
+      position="static"
+      // sx={{ backgroundColor: "dark" }}
+      elevation={0}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/*<AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />*/}

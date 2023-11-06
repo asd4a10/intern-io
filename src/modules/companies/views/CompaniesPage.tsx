@@ -1,7 +1,9 @@
+import { Outlet } from "react-router-dom";
+
 const CompaniesPage = () => {
   return (
     <>
-      <div>Companies Page</div>
+      <Outlet />
     </>
   );
 };

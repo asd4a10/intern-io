@@ -1,6 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getDatabase, onValue, ref, set, child, get } from "firebase/database";
+
 import { ICompany } from "../types/ICompany.ts";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -23,6 +24,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 export const db = getDatabase();
+
 const companiesRef = ref(db, "companies");
 function writeCompanyData(companyId: number, name: string, link: string) {
   // const db = getDatabase();
@@ -36,11 +38,67 @@ export const getCompanyData = async (
 ) => {
   let companies: ICompany[] = [];
   onValue(companiesRef, async (snapshot) => {
-    companies = snapshot.val();
-    setData(snapshot.val());
+    companies = [];
+    // console.log(snapshot);
+    snapshot.forEach((child) => {
+      // console.log(child.key);
+      companies.push({ id: +child.key, ...child.val() });
+    });
+    setData(companies);
     console.log(companies);
   });
   return companies;
 };
 
 export { writeCompanyData };
+
+// firestore
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  getDocs,
+  setDoc,
+  doc,
+} from "firebase/firestore";
+
+const firestoreDB = getFirestore(app);
+
+export const addCompanyToFirestore = async (newCompany: ICompany) => {
+  try {
+    // const compRef = await addDoc(
+    //   collection(firestoreDB, "companies"),
+    //   newCompany,
+    // );
+    // console.log("Document written with ID: ", compRef.id);
+    await setDoc(
+      doc(firestoreDB, "companies", newCompany.id.toString()),
+      newCompany,
+    );
+    console.log("Document written with ID: ", newCompany.id);
+  } catch (e) {
+    console.error("Error adding document: ", e);
+  }
+};
+
+export let companiesSize = 0;
+export const readCompaniesFirestore = async (
+  setData: React.Dispatch<React.SetStateAction<ICompany[]>>,
+) => {
+  const querySnapshot = await getDocs(collection(firestoreDB, "companies"));
+  const comps: ICompany[] = [];
+  querySnapshot.forEach((doc) => {
+    // console.log(`${doc.id} => ${doc}`);
+    // console.log(doc.data());
+    comps.push({
+      id: +doc.id,
+      name: doc.get("name"),
+      link: doc.get("link"),
+      img: doc.get("img"),
+      description: doc.get("description"),
+    });
+  });
+  setData(comps);
+  companiesSize = comps.length;
+  console.log(comps);
+};
