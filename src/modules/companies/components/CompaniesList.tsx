@@ -1,14 +1,25 @@
 import React, { useEffect, useState } from "react";
-import PropTypes from "prop-types";
-import Button from "@mui/material/Button";
 import { ICompany } from "../../../types/ICompany.ts";
 import {
+  companiesSize,
   getCompanyData,
   readCompaniesFirestore,
   writeCompanyData,
 } from "../../../configs/firebase.ts";
 import CompanyItem from "./CompanyItem.tsx";
-import { Grid } from "@mui/material";
+import {
+  FormControl,
+  Grid,
+  InputAdornment,
+  InputBase,
+  InputLabel,
+  OutlinedInput,
+  Paper,
+} from "@mui/material";
+import IconButton from "@mui/material/IconButton";
+import MenuIcon from "@mui/icons-material/Menu";
+import Box from "@mui/material/Box";
+import Typography from "@mui/material/Typography";
 
 CompaniesList.propTypes = {};
 
@@ -22,9 +33,14 @@ function CompaniesList(props) {
 
   return (
     <div>
-      <h1>Find your best company here</h1>
-      <div>Search bar</div>
-      <h2>Companies List</h2>
+      <Box sx={{ my: "1rem", textAlign: "center" }}>
+        <Typography variant={"h3"}>Find your next Internship here!</Typography>
+      </Box>
+      <Box sx={{ my: "1rem", textAlign: "center" }}>
+        <Typography variant={"h5"}>
+          Among {companiesSize} Companies at the moment
+        </Typography>
+      </Box>
       <Grid container spacing={2}>
         {companies.length > 0 &&
           companies.map((company) => (

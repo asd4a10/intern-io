@@ -1,5 +1,6 @@
 :root {
-/*  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
+    font-family: Avenir, Helvetica, serif;
+  /*Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
 /*  line-height: 1.5;*/
 /*  font-weight: 400;*/
 
@@ -18,4 +19,9 @@
 body, html {
     margin: 0;
     padding: 0;
+    height: 100%
+}
+
+#root {
+    height: 100%
 }

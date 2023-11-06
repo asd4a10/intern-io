@@ -1,4 +1,4 @@
-import { TextField } from "@mui/material";
+import { Alert, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -42,6 +42,7 @@ const AddCompanyPage = () => {
 
   const [formData, setFormData] = useState<formState>(initialFormState);
   const [errors, setErrors] = useState(initialError);
+  const [alert, setAlert] = useState<boolean>(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -61,11 +62,22 @@ const AddCompanyPage = () => {
   };
   const handleSubmit = async () => {
     await readCompaniesFirestore(() => {});
-    // console.log(companiesSize);
-    addCompanyToFirestore({
+    const response = await addCompanyToFirestore({
       ...formData,
       id: companiesSize,
     });
+    if (response) {
+      setFormData({
+        name: "",
+        description: "",
+        link: "",
+        img: "",
+      });
+      setAlert(true);
+      setTimeout(() => {
+        setAlert(false);
+      }, 5000);
+    }
   };
 
   return (
@@ -93,6 +105,11 @@ const AddCompanyPage = () => {
         // autoComplete="off"
       >
         <Typography variant={"h4"}>Add new company!</Typography>
+        {alert && (
+          <Alert severity="success">
+            Company was added successfully, thank you!
+          </Alert>
+        )}
         <TextField
           id="company-add-name"
           // fullWidth={true}

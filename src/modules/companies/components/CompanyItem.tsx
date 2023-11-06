@@ -15,38 +15,42 @@ interface CompanyItemProps {
 
 function CompanyItem({ company }: CompanyItemProps) {
   return (
-    <Card sx={cardSx}>
+    <Card sx={cardSx} elevation={3}>
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          maxWidth: "340px",
+          width: "340px",
           height: "150px",
         }}
       >
-        {/*  <CardMedia*/}
-        {/*    sx={{ width: "100%", height: "50%", objectFit: "cover" }}*/}
-        {/*    image="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png"*/}
-        {/*    title="green iguana"*/}
-        {/*  />*/}
-        <img width="300px" src={company.img} alt="green iguana" />
+        <img
+          width="300px"
+          // height="150px"
+          src={company.img}
+          alt="green iguana"
+          draggable="false"
+        />
       </Box>
 
-      <CardContent>
+      <CardContent sx={{ height: "150px" }}>
         <Typography gutterBottom variant="h5" component="div">
           {company.name}
         </Typography>
         <Typography variant="body2" color="text.secondary">
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius
-          expedita in laborum repudiandae tempore? Cum molestias nemo quod sit
-          tenetur!
+          {company.description}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Apply</Button>
-        <Button size="small">Learn More</Button>
+        <Button
+          size="small"
+          onClick={() => window.open(company.link, "_blank")}
+        >
+          Apply
+        </Button>
+        {/*<Button size="small">Learn More</Button>*/}
       </CardActions>
     </Card>
   );
