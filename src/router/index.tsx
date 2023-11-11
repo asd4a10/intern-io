@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import WelcomePage from "../modules/welcome/WelcomePage.tsx";
 import CompaniesPage from "../modules/companies/views/CompaniesPage.tsx";
-import CompanyItem from "../modules/companies/components/CompanyItem.tsx";
+// import CompanyItem from "../modules/companies/components/CompanyItem.tsx";
 import MainPageTemplate from "../modules/welcome/MainPageTemplate.tsx";
 import AddCompanyPage from "../modules/companies/views/AddCompanyPage.tsx";
 import CompaniesList from "../modules/companies/components/CompaniesList.tsx";
