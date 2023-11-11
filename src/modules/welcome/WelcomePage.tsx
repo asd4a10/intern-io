@@ -9,7 +9,6 @@ const WelcomePage = () => {
       sx={{
         height: "100%",
         mt: "auto",
-        pt: "2rem",
         pb: "0.5rem",
         display: "flex",
         flexDirection: "column",
@@ -17,7 +16,9 @@ const WelcomePage = () => {
         // justifyContent: "center",
       }}
     >
-      <Typography variant={"h3"}>Dear user, Welcome to Intern.io!</Typography>
+      <Typography sx={{ mb: 2 }} variant={"h3"}>
+        Welcome to Intern.io!
+      </Typography>
       {/*<Typography variant={"h5"}>*/}
       {/*  We hope you will find your Amazing internship here!*/}
       {/*</Typography>*/}
@@ -26,7 +27,7 @@ const WelcomePage = () => {
         <Link style={{ color: "black" }} to="/companies">
           here
         </Link>{" "}
-        to see top IT companies in the world.
+        to start exploring opportunities
       </Typography>
     </Box>
     // </>

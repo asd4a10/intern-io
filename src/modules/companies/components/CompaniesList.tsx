@@ -1,29 +1,17 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { ICompany } from "../../../types/ICompany.ts";
 import {
   companiesSize,
-  getCompanyData,
   readCompaniesFirestore,
-  writeCompanyData,
 } from "../../../configs/firebase.ts";
 import CompanyItem from "./CompanyItem.tsx";
-import {
-  FormControl,
-  Grid,
-  InputAdornment,
-  InputBase,
-  InputLabel,
-  OutlinedInput,
-  Paper,
-} from "@mui/material";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+import { Grid } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 
 CompaniesList.propTypes = {};
 
-function CompaniesList(props) {
+function CompaniesList() {
   const [companies, setCompanies] = useState<ICompany[]>([]);
 
   useEffect(() => {
@@ -33,7 +21,12 @@ function CompaniesList(props) {
 
   return (
     <div>
-      <Box sx={{ my: "1rem", textAlign: "center" }}>
+      <Box
+        sx={{
+          // my: "1rem",
+          textAlign: "center",
+        }}
+      >
         <Typography variant={"h3"}>Find your next Internship here!</Typography>
       </Box>
       <Box sx={{ my: "1rem", textAlign: "center" }}>

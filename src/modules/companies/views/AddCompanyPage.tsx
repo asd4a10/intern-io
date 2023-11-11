@@ -2,7 +2,7 @@ import { Alert, TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import { useState } from "react";
+import React, { useState } from "react";
 import {
   addCompanyToFirestore,
   companiesSize,
@@ -17,13 +17,6 @@ interface formState {
   description: string;
   link: string;
   img: string;
-}
-
-interface errorState {
-  name: boolean;
-  description: boolean;
-  link: boolean;
-  img: boolean;
 }
 
 const AddCompanyPage = () => {
@@ -87,7 +80,7 @@ const AddCompanyPage = () => {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "center",
-        height: "100vh",
+        // height: "100vh",
       }}
     >
       <Box
@@ -121,6 +114,7 @@ const AddCompanyPage = () => {
           helperText={errors.name ? "This field is required" : ""}
           value={formData.name}
           onChange={handleInputChange}
+          autoComplete={"off"}
         />
         <TextField
           id="company-add-description"
@@ -131,6 +125,7 @@ const AddCompanyPage = () => {
           helperText={errors.description ? "This field is required" : ""}
           value={formData.description}
           onChange={handleInputChange}
+          autoComplete={"off"}
         />
         <TextField
           id="company-add-link"
@@ -141,6 +136,7 @@ const AddCompanyPage = () => {
           helperText={errors.link ? "This field is required" : ""}
           value={formData.link}
           onChange={handleInputChange}
+          autoComplete={"off"}
         />
         <TextField
           id="company-add-img"
@@ -151,6 +147,7 @@ const AddCompanyPage = () => {
           helperText={errors.img ? "This field is required" : ""}
           value={formData.img}
           onChange={handleInputChange}
+          autoComplete={"off"}
         />
         <Button
           disabled={!validateFields()}

@@ -60,6 +60,8 @@ import {
   getDocs,
   setDoc,
   doc,
+  query,
+  orderBy,
 } from "firebase/firestore";
 
 const firestoreDB = getFirestore(app);
@@ -87,7 +89,9 @@ export let companiesSize = 0;
 export const readCompaniesFirestore = async (
   setData: React.Dispatch<React.SetStateAction<ICompany[]>>,
 ) => {
-  const querySnapshot = await getDocs(collection(firestoreDB, "companies"));
+  const q = query(collection(firestoreDB, "companies"), orderBy("id"));
+  // const querySnapshot = await getDocs(collection(firestoreDB, "companies"));
+  const querySnapshot = await getDocs(q);
   const comps: ICompany[] = [];
   querySnapshot.forEach((doc) => {
     // console.log(`${doc.id} => ${doc}`);

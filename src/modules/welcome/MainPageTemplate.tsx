@@ -10,14 +10,16 @@ const MainPageTemplate = () => {
       sx={{
         height: "100%",
         display: "flex",
-        maxWidth: "1600px",
         overflowY: "scroll",
         mx: "auto",
         flexDirection: "column",
       }}
     >
       <Header />
-      <Container maxWidth="xl" sx={{ flexGrow: "1" }}>
+      <Container
+        maxWidth="xl"
+        sx={{ flexGrow: "1", pt: "2rem", maxWidth: "1600px" }}
+      >
         <Outlet />
       </Container>
       <Footer />
