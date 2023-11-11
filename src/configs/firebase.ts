@@ -1,6 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getDatabase, onValue, ref, set, child, get } from "firebase/database";
+// import { getDatabase, onValue, ref } from "firebase/database";
 
 import { ICompany } from "../types/ICompany.ts";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -23,40 +23,40 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-export const db = getDatabase();
-
-const companiesRef = ref(db, "companies");
-function writeCompanyData(companyId: number, name: string, link: string) {
-  // const db = getDatabase();
-  // const reference = ref(db, "companies/" + companyId);
-  //
-  // set(reference, { name, link });
-}
-
-export const getCompanyData = async (
-  setData: React.Dispatch<React.SetStateAction<ICompany[]>>,
-) => {
-  let companies: ICompany[] = [];
-  onValue(companiesRef, async (snapshot) => {
-    companies = [];
-    // console.log(snapshot);
-    snapshot.forEach((child) => {
-      // console.log(child.key);
-      companies.push({ id: +child.key, ...child.val() });
-    });
-    setData(companies);
-    console.log(companies);
-  });
-  return companies;
-};
-
-export { writeCompanyData };
+// export const db = getDatabase();
+//
+// const companiesRef = ref(db, "companies");
+// function writeCompanyData(companyId: number, name: string, link: string) {
+//   // const db = getDatabase();
+//   // const reference = ref(db, "companies/" + companyId);
+//   //
+//   // set(reference, { name, link });
+// }
+//
+// export const getCompanyData = async (
+//   setData: React.Dispatch<React.SetStateAction<ICompany[]>>,
+// ) => {
+//   let companies: ICompany[] = [];
+//   onValue(companiesRef, async (snapshot) => {
+//     companies = [];
+//     // console.log(snapshot);
+//     snapshot.forEach((child) => {
+//       // console.log(child.key);
+//       companies.push({ id: +child.key, ...child.val() });
+//     });
+//     setData(companies);
+//     console.log(companies);
+//   });
+//   return companies;
+// };
+//
+// export { writeCompanyData };
 
 // firestore
 import {
   getFirestore,
   collection,
-  addDoc,
+  // addDoc,
   getDocs,
   setDoc,
   doc,

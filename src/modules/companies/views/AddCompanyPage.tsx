@@ -10,7 +10,7 @@ import {
 } from "../../../configs/firebase.ts";
 
 type FormState = {
-  [key: string]: any; // Add an index signature
+  [key: string]: unknown; // Add an index signature
 };
 interface formState {
   name: string;
@@ -37,7 +37,7 @@ const AddCompanyPage = () => {
   const [errors, setErrors] = useState(initialError);
   const [alert, setAlert] = useState<boolean>(false);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
