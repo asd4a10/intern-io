@@ -8,23 +8,23 @@ import CompaniesList from "../modules/companies/components/CompaniesList.tsx";
 
 export const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/intern-io",
     element: <MainPageTemplate />,
     children: [
       {
-        path: "/",
+        path: "/intern-io",
         element: <WelcomePage />,
       },
       {
-        path: "/companies",
+        path: "/intern-io/companies",
         element: <CompaniesPage />,
         children: [
           {
-            path: "/companies",
+            path: "/intern-io/companies",
             element: <CompaniesList />,
           },
           {
-            path: "/companies/add",
+            path: "/intern-io/companies/add",
             element: <AddCompanyPage />,
           },
         ],

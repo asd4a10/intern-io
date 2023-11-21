@@ -18,7 +18,7 @@ import AdbIcon from "@mui/icons-material/Adb";
 import { useNavigate } from "react-router-dom";
 
 const pages = [
-  { title: "Companies", to: "/companies" },
+  { title: "Companies", to: "/intern-io/companies" },
   // { title: "Open Positions", to: "/" },
   // { title: "Add company", to: "/companies/add" },
 ];
@@ -75,7 +75,7 @@ export default function Header() {
               textDecoration: "none",
             }}
             onClick={() => {
-              handleGoToPage("/");
+              handleGoToPage("/intern-io");
             }}
           >
             Intern.io
