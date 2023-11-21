@@ -17,3 +17,5 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_TOKEN }}'
 #          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_INTERN_IO_4A22B }}'
           projectId: intern-io-4a22b
+        env:
+          FIREBASE_CLI_EXPERIMENTS: webframeworks
