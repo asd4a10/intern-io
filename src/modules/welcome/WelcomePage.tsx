@@ -24,7 +24,7 @@ const WelcomePage = () => {
       {/*</Typography>*/}
       <Typography variant={"h5"}>
         Click{" "}
-        <Link style={{ color: "black" }} to="/companies">
+        <Link style={{ color: "black" }} to="/intern-io/companies">
           here
         </Link>{" "}
         to start exploring opportunities
