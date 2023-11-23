@@ -17,7 +17,7 @@ const Footer = () => {
     >
       <Divider variant="middle" />
       <Typography sx={{ py: "0.5rem" }} variant={"subtitle1"}>
-        Copyright © 2023 RA technologies. All Rights Reserved.
+        Copyright © 2023 Lever0ff Corp. All Rights Reserved.
       </Typography>
     </Box>
   );
