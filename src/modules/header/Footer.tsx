@@ -17,7 +17,18 @@ const Footer = () => {
     >
       <Divider variant="middle" />
       <Typography sx={{ py: "0.5rem" }} variant={"subtitle1"}>
-        Copyright © 2023 Lever0ff Corp. All Rights Reserved.
+        Copyright © 2023 Leveroff Corp. All Rights Reserved.{" "}
+        <a
+          style={{
+            // textDecoration: "underline",
+            color: "black",
+          }}
+          target="_blank"
+          href="https://github.com/asd4a10/intern-io"
+        >
+          Github page
+        </a>
+        .
       </Typography>
     </Box>
   );
