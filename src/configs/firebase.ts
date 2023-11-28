@@ -23,35 +23,6 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-// export const db = getDatabase();
-//
-// const companiesRef = ref(db, "companies");
-// function writeCompanyData(companyId: number, name: string, link: string) {
-//   // const db = getDatabase();
-//   // const reference = ref(db, "companies/" + companyId);
-//   //
-//   // set(reference, { name, link });
-// }
-//
-// export const getCompanyData = async (
-//   setData: React.Dispatch<React.SetStateAction<ICompany[]>>,
-// ) => {
-//   let companies: ICompany[] = [];
-//   onValue(companiesRef, async (snapshot) => {
-//     companies = [];
-//     // console.log(snapshot);
-//     snapshot.forEach((child) => {
-//       // console.log(child.key);
-//       companies.push({ id: +child.key, ...child.val() });
-//     });
-//     setData(companies);
-//     console.log(companies);
-//   });
-//   return companies;
-// };
-//
-// export { writeCompanyData };
-
 // firestore
 import {
   getFirestore,
@@ -64,15 +35,10 @@ import {
   orderBy,
 } from "firebase/firestore";
 
-const firestoreDB = getFirestore(app);
+export const firestoreDB = getFirestore(app);
 
 export const addCompanyToFirestore = async (newCompany: ICompany) => {
   try {
-    // const compRef = await addDoc(
-    //   collection(firestoreDB, "companies"),
-    //   newCompany,
-    // );
-    // console.log("Document written with ID: ", compRef.id);
     await setDoc(
       doc(firestoreDB, "companies", newCompany.id.toString()),
       newCompany,
