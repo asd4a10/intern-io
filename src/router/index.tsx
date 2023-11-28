@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import WelcomePage from "../modules/welcome/WelcomePage.tsx";
+// import WelcomePage from "../modules/welcome/WelcomePage.tsx";
 import CompaniesPage from "../modules/companies/views/CompaniesPage.tsx";
 // import CompanyItem from "../modules/companies/components/CompanyItem.tsx";
 import MainPageTemplate from "../modules/welcome/MainPageTemplate.tsx";
 import AddCompanyPage from "../modules/companies/views/AddCompanyPage.tsx";
 import CompaniesList from "../modules/companies/components/CompaniesList.tsx";
+import WelcomePage from "../modules/welcome/WelcomePage.tsx";
 
 export const router = createBrowserRouter([
   {
@@ -12,19 +13,19 @@ export const router = createBrowserRouter([
     element: <MainPageTemplate />,
     children: [
       {
-        path: "/intern-io",
+        path: "welcome",
         element: <WelcomePage />,
       },
       {
-        path: "/intern-io/companies",
+        path: "",
         element: <CompaniesPage />,
         children: [
           {
-            path: "/intern-io/companies",
+            path: "",
             element: <CompaniesList />,
           },
           {
-            path: "/intern-io/companies/add",
+            path: "add",
             element: <AddCompanyPage />,
           },
         ],

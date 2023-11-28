@@ -17,8 +17,13 @@ import AdbIcon from "@mui/icons-material/Adb";
 // router
 import { useNavigate } from "react-router-dom";
 
-const pages = [
-  { title: "Companies", to: "/intern-io/companies" },
+interface NavItem {
+  title: string;
+  to: string;
+}
+
+const pages: NavItem[] = [
+  // { title: "Companies", to: "/intern-io/companies" },
   // { title: "Open Positions", to: "/" },
   // { title: "Add company", to: "/companies/add" },
 ];
@@ -56,7 +61,8 @@ export default function Header() {
     <AppBar
       // color="dark"
       position="static"
-      sx={{ backgroundColor: "#5b5b5b" }}
+      // color="secondary"
+      sx={{ backgroundColor: "#455A64" }}
       elevation={0}
     >
       <Container maxWidth="xl">

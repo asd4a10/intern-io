@@ -23,6 +23,7 @@ function CompanyItem({ company }: CompanyItemProps) {
           justifyContent: "center",
           width: "340px",
           height: "150px",
+          py: 2,
         }}
       >
         <img
@@ -57,7 +58,7 @@ function CompanyItem({ company }: CompanyItemProps) {
 
 const cardSx = {
   maxWidth: 345,
-  // backgroundColor: "secondary",
+  backgroundColor: "#FFFFFF",
 };
 
 export default CompanyItem;
