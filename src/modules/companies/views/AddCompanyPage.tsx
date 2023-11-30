@@ -93,6 +93,7 @@ const AddCompanyPage = () => {
           padding: "2rem",
           border: "1px solid lightgray",
           borderRadius: "10%",
+          backgroundColor: "white",
         }}
         // noValidate
         // autoComplete="off"
@@ -126,6 +127,7 @@ const AddCompanyPage = () => {
           value={formData.description}
           onChange={handleInputChange}
           autoComplete={"off"}
+          multiline
         />
         <TextField
           id="company-add-link"
@@ -154,6 +156,7 @@ const AddCompanyPage = () => {
           color="secondary"
           variant="outlined"
           onClick={handleSubmit}
+          // style={grayStyle}
         >
           Submit
         </Button>

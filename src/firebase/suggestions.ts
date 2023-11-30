@@ -1,11 +1,15 @@
 import { collection, addDoc } from "firebase/firestore";
 import { firestoreDB } from "../configs/firebase.ts";
 
-export const addCompanySuggestion = async (newCompany: string) => {
+export const addCompanySuggestion = async (newCompany: {
+  companyName: string;
+  supporterName: string;
+}) => {
   try {
-    const compRef = await addDoc(collection(firestoreDB, "suggestions"), {
-      companyName: newCompany,
-    });
+    const compRef = await addDoc(
+      collection(firestoreDB, "suggestions"),
+      newCompany,
+    );
     console.log("Document written with ID: ", compRef.id);
     return true;
   } catch (e) {

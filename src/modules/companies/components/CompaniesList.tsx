@@ -32,6 +32,7 @@ function CompaniesList() {
     readCompaniesFirestore(setCompanies); // firestore db
   }, []);
 
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setView(newValue);
@@ -81,7 +82,7 @@ function CompaniesList() {
               <ListItem
                 key={company.id}
                 disablePadding
-                sx={{ bgcolor: "background.paper", my: 1 }}
+                sx={{ bgcolor: "background.paper", mb: 1 }}
               >
                 <ListItemButton
                   disableRipple={true}
