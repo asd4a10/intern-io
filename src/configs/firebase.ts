@@ -72,5 +72,5 @@ export const readCompaniesFirestore = async (
   });
   setData(comps);
   companiesSize = comps.length;
-  console.log(comps);
+  // console.log(comps);
 };

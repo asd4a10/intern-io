@@ -21,29 +21,37 @@ function CompanyItem({ company }: CompanyItemProps) {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          width: "340px",
-          height: "150px",
-          py: 2,
+          height: { xs: "70px", md: "150px" },
+          pt: { xs: 5, md: 2 },
         }}
       >
         <img
-          width="300px"
-          // height="150px"
+          width="80%"
           src={company.img}
           alt="green iguana"
           draggable="false"
         />
       </Box>
 
-      <CardContent sx={{ height: "150px" }}>
+      <CardContent sx={{ textOverflow: "hidden" }}>
         <Typography gutterBottom variant="h5" component="div">
           {company.name}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
+        <Typography
+          variant="body2"
+          color="text.secondary"
+          sx={{
+            display: {
+              xs: "block",
+              sm: "block",
+            },
+          }}
+        >
           {company.description}
         </Typography>
       </CardContent>
-      <CardActions>
+
+      <CardActions sx={{ mt: "auto" }}>
         <Button
           size="small"
           onClick={() => window.open(company.link, "_blank")}
@@ -57,7 +65,12 @@ function CompanyItem({ company }: CompanyItemProps) {
 }
 
 const cardSx = {
-  maxWidth: 345,
+  py: 0,
+  display: "flex",
+  flexDirection: "column",
+  // maxWidth: 345,
+  height: "100%",
+  minHeight: "350px",
   backgroundColor: "#FFFFFF",
 };
 

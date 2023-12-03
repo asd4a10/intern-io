@@ -18,7 +18,11 @@ const MainPageTemplate = () => {
       <Header />
       <Container
         maxWidth="xl"
-        sx={{ flexGrow: "1", pt: "2rem", maxWidth: "1600px" }}
+        sx={{
+          flexGrow: "1",
+          pt: "2rem",
+          maxWidth: { xs: "350px", sm: "600px", md: "1200px" },
+        }}
       >
         <Outlet />
       </Container>

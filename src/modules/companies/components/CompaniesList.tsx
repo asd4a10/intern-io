@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ICompany } from "../../../types/ICompany.ts";
 import {
   companiesSize,
@@ -21,6 +21,7 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import SuggestionComponent from "./SuggestionComponent.tsx";
 import Button from "@mui/material/Button";
+import ScrollToBottomButton from "../../common/ScrollToBottomButton.tsx";
 
 CompaniesList.propTypes = {};
 
@@ -39,6 +40,8 @@ function CompaniesList() {
     // console.log(newValue);
   };
 
+  const divRef = useRef<HTMLDivElement>(null);
+
   return (
     <div>
       <Box
@@ -54,7 +57,7 @@ function CompaniesList() {
         </Typography>
       </Box>
       <SuggestionComponent />
-      <Box sx={{ borderColor: "divider" }}>
+      <Box sx={{ borderColor: "divider", mb: 2 }}>
         <Tabs
           value={view}
           onChange={handleChange}
@@ -66,10 +69,15 @@ function CompaniesList() {
         </Tabs>
       </Box>
       {view == "cards" && (
-        <Grid container spacing={2}>
+        <Grid
+          container
+          alignItems={"stretch"}
+          justifyContent={"center"}
+          spacing={2}
+        >
           {companies.length > 0 &&
             companies.map((company) => (
-              <Grid key={company.id} item xs={6} sm={4} md={3}>
+              <Grid key={company.id} item xs={12} sm={6} md={4} lg={3}>
                 <CompanyItem company={company} />
               </Grid>
             ))}
@@ -113,6 +121,8 @@ function CompaniesList() {
             ))}
         </List>
       )}
+      <ScrollToBottomButton targetRef={divRef} />
+      <div ref={divRef}></div>
     </div>
   );
 }
