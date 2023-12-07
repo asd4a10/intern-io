@@ -1,5 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { getAnalytics, logEvent } from "firebase/analytics";
+
 // import { getDatabase, onValue, ref } from "firebase/database";
 
 import { ICompany } from "../types/ICompany.ts";
@@ -23,11 +25,13 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
+const analytics = getAnalytics(app);
+logEvent(analytics, "notification_received");
+
 // firestore
 import {
   getFirestore,
   collection,
-  // addDoc,
   getDocs,
   setDoc,
   doc,
