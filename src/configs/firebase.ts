@@ -23,7 +23,7 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
 
 const analytics = getAnalytics(app);
 logEvent(analytics, "notification_received");
@@ -47,7 +47,7 @@ export const addCompanyToFirestore = async (newCompany: ICompany) => {
       doc(firestoreDB, "companies", newCompany.id.toString()),
       newCompany,
     );
-    console.log("Document written with ID: ", newCompany.id);
+    // console.log("Document written with ID: ", newCompany.id);
     return true;
   } catch (e) {
     console.error("Error adding document: ", e);

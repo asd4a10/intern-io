@@ -28,7 +28,7 @@ const ScrollToBottomButton = ({ targetRef }: ScrollToBottomButtonProps) => {
   // }, []);
 
   const handleScrollToBottom = () => {
-    console.log("ho");
+    // console.log("ho");
     targetRef.current?.scrollIntoView({ behavior: "instant" });
     setShowButton(false);
   };

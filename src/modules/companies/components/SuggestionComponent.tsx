@@ -57,7 +57,7 @@ const SuggestionComponent = () => {
       await addCompanySuggestion(suggestion);
       setOpen(false);
       setSnackbar(true);
-      console.log("suggestion sent successfully!");
+      // console.log("suggestion sent successfully!");
     } catch (e) {
       console.log(e);
     }

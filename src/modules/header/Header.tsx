@@ -6,9 +6,14 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import TelegramIcon from "@mui/icons-material/Telegram";
-
 // router
 import { useNavigate } from "react-router-dom";
+import { signInWithGoogle, logOut } from "../../firebase/auth";
+
+// user store
+import { useSelector } from "react-redux";
+import { RootState } from "../../app/store.ts";
+import { useDispatch } from "react-redux";
 
 interface NavItem {
   title: string;
@@ -20,33 +25,28 @@ const pages: NavItem[] = [
   // { title: "Open Positions", to: "/" },
   // { title: "Add company", to: "/companies/add" },
 ];
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const telegramLink = "https://t.me/+evox5J6c7LQyN2Yy";
 
 export default function Header() {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const isAuthorized = useSelector(
+    (state: RootState) => state.user.isAuthorized,
+  );
+
   const handleGoToPage = (to: string) => {
     navigate(to);
   };
 
   return (
-    <AppBar
-      // color="dark"
-      position="static"
-      // color="secondary"
-      sx={{ backgroundColor: "#455A64" }}
-      elevation={0}
-    >
+    <AppBar position="static" sx={{ backgroundColor: "#455A64" }} elevation={0}>
       <Container
         maxWidth="xl"
         sx={{ maxWidth: { xs: "350px", sm: "600px", md: "1200px" } }}
       >
         <Toolbar disableGutters>
-          {/*<AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />*/}
           <Button
-            // component="a"
-            // href="#app-bar-with-responsive-menu"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "flex" },
@@ -76,7 +76,6 @@ export default function Header() {
               </Button>
             ))}
           </Box>
-          <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "flex" }, alignItems: "center" }}>
             <IconButton
               size="large"
@@ -87,19 +86,88 @@ export default function Header() {
               }}
               color="inherit"
             >
-              <Typography
-                variant="h6"
-                component="div"
-                sx={{
-                  flexGrow: 1,
-                  display: { xs: "none", sm: "block" },
-                  mr: 1,
-                }}
-              >
-                Official Page
-              </Typography>
+              {/*<Typography*/}
+              {/*  variant="subtitle1"*/}
+              {/*  component="div"*/}
+              {/*  sx={{*/}
+              {/*    flexGrow: 1,*/}
+              {/*    display: { xs: "none", sm: "block" },*/}
+              {/*    mr: 1,*/}
+              {/*  }}*/}
+              {/*>*/}
+              {/*  Official Page*/}
+              {/*</Typography>*/}
               <TelegramIcon />
             </IconButton>
+          </Box>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: "flex" }, alignItems: "center" }}>
+            {!isAuthorized ? (
+              <IconButton
+                size="large"
+                aria-label="show more"
+                aria-haspopup="true"
+                onClick={() => {
+                  signInWithGoogle(dispatch);
+                }}
+                color="inherit"
+              >
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    flexGrow: 1,
+                    display: { xs: "none", sm: "block" },
+                    mr: 1,
+                  }}
+                >
+                  Sign In
+                </Typography>
+              </IconButton>
+            ) : (
+              <IconButton
+                size="large"
+                aria-label="show more"
+                aria-haspopup="true"
+                onClick={() => {
+                  logOut(dispatch);
+                }}
+                color="inherit"
+              >
+                <Typography
+                  variant="h6"
+                  component="div"
+                  sx={{
+                    flexGrow: 1,
+                    display: { xs: "none", sm: "block" },
+                    mr: 1,
+                  }}
+                >
+                  Sign Out
+                </Typography>
+              </IconButton>
+            )}
+            {/*{isAuthenticated && (*/}
+            {/*  <IconButton*/}
+            {/*    size="large"*/}
+            {/*    aria-label="show more"*/}
+            {/*    aria-haspopup="true"*/}
+            {/*    onClick={logOut}*/}
+            {/*    color="inherit"*/}
+            {/*  >*/}
+            {/*    <Typography*/}
+            {/*      variant="h6"*/}
+            {/*      component="div"*/}
+            {/*      sx={{*/}
+            {/*        flexGrow: 1,*/}
+            {/*        display: { xs: "none", sm: "block" },*/}
+            {/*        mr: 1,*/}
+            {/*      }}*/}
+            {/*    >*/}
+            {/*      Sign Out*/}
+            {/*    </Typography>*/}
+            {/*  </IconButton>*/}
+            {/*)}*/}
           </Box>
 
           {/*<Box sx={{ flexGrow: 0 }}>*/}
