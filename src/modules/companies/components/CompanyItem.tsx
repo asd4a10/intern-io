@@ -1,4 +1,3 @@
-// import PropTypes from "prop-types";
 import { ICompany } from "../../../types/ICompany.ts";
 
 import Card from "@mui/material/Card";
@@ -8,13 +7,22 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 
+// logging
+import { addLog } from "../../../firebase/analytics.ts";
+
 interface CompanyItemProps {
   company: ICompany;
 }
 
 function CompanyItem({ company }: CompanyItemProps) {
   return (
-    <Card sx={cardSx} elevation={3}>
+    <Card
+      sx={cardSx}
+      elevation={3}
+      onClick={() => {
+        addLog(`click card for company - ${company.name}`);
+      }}
+    >
       <Box
         sx={{
           display: "flex",
@@ -54,7 +62,10 @@ function CompanyItem({ company }: CompanyItemProps) {
       <CardActions sx={{ mt: "auto" }}>
         <Button
           size="small"
-          onClick={() => window.open(company.link, "_blank")}
+          onClick={() => {
+            window.open(company.link, "_blank");
+            addLog(`opening link for company - ${company.name}`);
+          }}
         >
           Apply
         </Button>

@@ -15,6 +15,9 @@ import { useSelector } from "react-redux";
 import { RootState } from "../../app/store.ts";
 import { useDispatch } from "react-redux";
 
+// logging
+import { addLog } from "../../firebase/analytics.ts";
+
 interface NavItem {
   title: string;
   to: string;
@@ -58,6 +61,7 @@ export default function Header() {
             }}
             onClick={() => {
               handleGoToPage("/intern-io");
+              addLog(`click LOGO`);
             }}
           >
             Intern.io
@@ -83,6 +87,7 @@ export default function Header() {
               aria-haspopup="true"
               onClick={() => {
                 window.open(telegramLink, "_blank");
+                addLog(`click Telegram link`);
               }}
               color="inherit"
             >
@@ -109,6 +114,7 @@ export default function Header() {
                 aria-haspopup="true"
                 onClick={() => {
                   signInWithGoogle(dispatch);
+                  addLog(`click SIGN IN`);
                 }}
                 color="inherit"
               >
@@ -131,6 +137,7 @@ export default function Header() {
                 aria-haspopup="true"
                 onClick={() => {
                   logOut(dispatch);
+                  addLog(`click SIGN OUT`);
                 }}
                 color="inherit"
               >
