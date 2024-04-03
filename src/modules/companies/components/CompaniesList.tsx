@@ -1,37 +1,56 @@
-import { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { ICompany } from "../../../types/ICompany.ts";
-import {
-  companiesSize,
-  readCompaniesFirestore,
-} from "../../../configs/firebase.ts";
 import CompanyItem from "./CompanyItem.tsx";
-import {
-  Avatar,
-  Grid,
-  List,
-  ListItem,
-  ListItemAvatar,
-  ListItemButton,
-  ListItemSecondaryAction,
-  ListItemText,
-  Tab,
-  Tabs,
-} from "@mui/material";
+import { FormControlLabel, Grid, List, Switch, Tab, Tabs } from "@mui/material";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import SuggestionComponent from "./SuggestionComponent.tsx";
-import Button from "@mui/material/Button";
+// import SuggestionComponent from "./SuggestionComponent.tsx";
 import ScrollToBottomButton from "../../common/ScrollToBottomButton.tsx";
+import {
+  getApplicationStatuses,
+  IApplicationStatusType,
+} from "../../../db/indexedDatabase.ts";
+import jsonData from "../../../db/companies.json";
+import CompanyListViewCard from "./CompanyListViewCard.tsx";
 
 CompaniesList.propTypes = {};
 
 function CompaniesList() {
+  const [applicationStatuses, setApplicationStatuses] = useState<
+    IApplicationStatusType[]
+  >([]);
   const [companies, setCompanies] = useState<ICompany[]>([]);
-  const [view, setView] = useState("cards");
+  const [view, setView] = useState("list");
+  // isDetailsVisible
+  const [isDetailsVisible, setIsDetailsVisible] = useState(true);
+  // useEffect(() => {
+  //   readCompaniesFirestore(setCompanies); // firestore db
+  // }, []);
 
   useEffect(() => {
-    readCompaniesFirestore(setCompanies); // firestore db
+    // clearApplicationStatuses();
+    const fetchApplications = async () => {
+      setCompanies(jsonData.companies);
+      // console.log("applications: ", data);
+      try {
+        const data = await getApplicationStatuses();
+        setApplicationStatuses(data);
+      } catch (e) {
+        console.log(e);
+      }
+    };
+    fetchApplications();
   }, []);
+
+  const filterStatuses = (
+    companyId: number,
+  ): IApplicationStatusType | undefined => {
+    const found = applicationStatuses.find(
+      (application) => application.companyId == companyId,
+    );
+    // console.log("found: ", found);
+    return found;
+  };
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
@@ -51,12 +70,12 @@ function CompaniesList() {
       >
         <Typography variant={"h3"}>Find your next Internship here!</Typography>
       </Box>
-      <Box sx={{ mt: "1rem", textAlign: "center" }}>
+      <Box sx={{ my: "1rem", textAlign: "center" }}>
         <Typography variant={"h5"}>
-          Among {companiesSize} Companies at the moment
+          Among {companies.length} Companies at the moment
         </Typography>
       </Box>
-      <SuggestionComponent />
+      {/*<SuggestionComponent />*/}
       <Box sx={{ borderColor: "divider", mb: 2 }}>
         <Tabs
           value={view}
@@ -64,60 +83,53 @@ function CompaniesList() {
           aria-label="basic tabs example"
           centered
         >
-          <Tab label="Cards" value="cards" />
           <Tab label="List" value="list" />
+          <Tab label="Cards" value="cards" />
         </Tabs>
       </Box>
       {view == "cards" && (
-        <Grid
-          container
-          alignItems={"stretch"}
-          justifyContent={"center"}
-          spacing={2}
-        >
-          {companies.length > 0 &&
-            companies.map((company) => (
-              <Grid key={company.id} item xs={12} sm={6} md={4} lg={3}>
-                <CompanyItem company={company} />
-              </Grid>
-            ))}
-        </Grid>
+        <Box>
+          <Box sx={{ display: "flex", justifyContent: "right", mb: 1 }}>
+            <FormControlLabel
+              control={
+                <Switch
+                  value={isDetailsVisible}
+                  defaultChecked
+                  onChange={() => setIsDetailsVisible(!isDetailsVisible)}
+                />
+              }
+              label="Details"
+            />
+          </Box>
+          <Grid
+            container
+            alignItems={"stretch"}
+            justifyContent={"center"}
+            spacing={2}
+          >
+            {companies.length > 0 &&
+              companies.map((company, index) => (
+                <Grid key={company.id} item xs={6} sm={4} md={3} lg={3}>
+                  <CompanyItem
+                    company={company}
+                    index={index}
+                    isDetailsVisible={isDetailsVisible}
+                  />
+                </Grid>
+              ))}
+          </Grid>
+        </Box>
       )}
       {view == "list" && (
         <List sx={{ mx: 30, p: 0 }}>
           {companies.length > 0 &&
-            companies.map((company) => (
-              <ListItem
+            companies.map((company, index) => (
+              <CompanyListViewCard
+                company={company}
+                index={index}
                 key={company.id}
-                disablePadding
-                sx={{ bgcolor: "background.paper", mb: 1 }}
-              >
-                <ListItemButton
-                  disableRipple={true}
-                  sx={{ px: 5, cursor: "default" }}
-                >
-                  <ListItemAvatar>
-                    <Avatar
-                      alt={`Avatar}`}
-                      src={company.img}
-                      sx={{
-                        maxWidth: 50,
-                        maxHeight: 50,
-                        width: "100%",
-                        height: "100%",
-                        borderRadius: 0,
-                        mr: 3,
-                      }}
-                    />
-                  </ListItemAvatar>
-                  <ListItemText primary={company.name} />
-                  <ListItemSecondaryAction>
-                    <Button onClick={() => window.open(company.link, "_blank")}>
-                      Apply
-                    </Button>
-                  </ListItemSecondaryAction>
-                </ListItemButton>
-              </ListItem>
+                status={filterStatuses(company.id)}
+              />
             ))}
         </List>
       )}

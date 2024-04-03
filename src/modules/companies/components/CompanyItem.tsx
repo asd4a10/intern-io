@@ -9,12 +9,29 @@ import Box from "@mui/material/Box";
 
 // logging
 import { addLog } from "../../../firebase/analytics.ts";
+import React from "react";
+import { Menu, MenuItem } from "@mui/material";
 
 interface CompanyItemProps {
   company: ICompany;
+  index: number;
+  isDetailsVisible: boolean;
 }
 
-function CompanyItem({ company }: CompanyItemProps) {
+function CompanyItem({
+  company,
+  // index,
+  isDetailsVisible,
+}: CompanyItemProps) {
+  // status application menu
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  // const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  //   setAnchorEl(event.currentTarget);
+  // };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
   return (
     <Card
       sx={cardSx}
@@ -29,7 +46,7 @@ function CompanyItem({ company }: CompanyItemProps) {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          height: { xs: "70px", md: "150px" },
+          height: { xs: "70px", md: "100px", lg: "125px" },
           pt: { xs: 5, md: 2 },
         }}
       >
@@ -41,25 +58,29 @@ function CompanyItem({ company }: CompanyItemProps) {
         />
       </Box>
 
-      <CardContent sx={{ textOverflow: "hidden" }}>
-        <Typography gutterBottom variant="h5" component="div">
-          {company.name}
-        </Typography>
-        <Typography
-          variant="body2"
-          color="text.secondary"
-          sx={{
-            display: {
-              xs: "block",
-              sm: "block",
-            },
-          }}
-        >
-          {company.description}
-        </Typography>
+      <CardContent sx={{ textOverflow: "hidden", pb: 1, textAlign: "start" }}>
+        {isDetailsVisible && (
+          <Typography component="div">{company.name}</Typography>
+        )}
+        {isDetailsVisible && (
+          <Typography
+            variant="body2"
+            color="text.secondary"
+            sx={{
+              display: {
+                xs: "block",
+                sm: "block",
+              },
+            }}
+          >
+            {company.description}
+          </Typography>
+        )}
       </CardContent>
 
-      <CardActions sx={{ mt: "auto" }}>
+      <CardActions
+        sx={{ mt: "auto", display: "flex", justifyContent: "start" }}
+      >
         <Button
           size="small"
           onClick={() => {
@@ -69,6 +90,28 @@ function CompanyItem({ company }: CompanyItemProps) {
         >
           Apply
         </Button>
+        {/*<Button*/}
+        {/*  id="basic-button"*/}
+        {/*  aria-controls={open ? "basic-menu" : undefined}*/}
+        {/*  aria-haspopup="true"*/}
+        {/*  aria-expanded={open ? "true" : undefined}*/}
+        {/*  onClick={handleClick}*/}
+        {/*>*/}
+        {/*  Status*/}
+        {/*</Button>*/}
+        <Menu
+          id="basic-menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            "aria-labelledby": "basic-button",
+          }}
+        >
+          <MenuItem onClick={handleClose}>Profile</MenuItem>
+          <MenuItem onClick={handleClose}>My account</MenuItem>
+          <MenuItem onClick={handleClose}>Logout</MenuItem>
+        </Menu>
         {/*<Button size="small">Learn More</Button>*/}
       </CardActions>
     </Card>
@@ -81,7 +124,7 @@ const cardSx = {
   flexDirection: "column",
   // maxWidth: 345,
   height: "100%",
-  minHeight: "350px",
+  minHeight: { xs: "70px", md: "100px", lg: "50px" },
   backgroundColor: "#FFFFFF",
 };
 
