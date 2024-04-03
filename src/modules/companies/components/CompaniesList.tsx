@@ -9,6 +9,7 @@ import ScrollToBottomButton from "../../common/ScrollToBottomButton.tsx";
 import {
   getApplicationStatuses,
   IApplicationStatusType,
+  // clearApplicationStatuses,
 } from "../../../db/indexedDatabase.ts";
 import jsonData from "../../../db/companies.json";
 import CompanyListViewCard from "./CompanyListViewCard.tsx";
@@ -27,19 +28,21 @@ function CompaniesList() {
   //   readCompaniesFirestore(setCompanies); // firestore db
   // }, []);
 
+  const fetchApplications = async () => {
+    // console.log("applications: ", data);
+    try {
+      const data = await getApplicationStatuses();
+      console.log("fetching applications...");
+      setApplicationStatuses(data);
+    } catch (e) {
+      console.log("error while fetching applications...", e);
+    }
+  };
+
   useEffect(() => {
     // clearApplicationStatuses();
-    const fetchApplications = async () => {
-      setCompanies(jsonData.companies);
-      // console.log("applications: ", data);
-      try {
-        const data = await getApplicationStatuses();
-        setApplicationStatuses(data);
-      } catch (e) {
-        console.log(e);
-      }
-    };
     fetchApplications();
+    setCompanies(jsonData.companies);
   }, []);
 
   const filterStatuses = (
@@ -56,6 +59,8 @@ function CompaniesList() {
   // @ts-ignore
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setView(newValue);
+    fetchApplications();
+    // setIsDetailsVisible(true);
     // console.log(newValue);
   };
 
@@ -93,8 +98,7 @@ function CompaniesList() {
             <FormControlLabel
               control={
                 <Switch
-                  value={isDetailsVisible}
-                  defaultChecked
+                  checked={isDetailsVisible}
                   onChange={() => setIsDetailsVisible(!isDetailsVisible)}
                 />
               }
