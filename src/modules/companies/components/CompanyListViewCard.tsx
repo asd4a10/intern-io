@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import {
   Avatar,
+  Chip,
   ListItem,
   ListItemAvatar,
   ListItemButton,
@@ -64,13 +65,14 @@ const CompanyListViewCard = ({
       sx={{ bgcolor: "background.paper", mb: 1 }}
     >
       <ListItemButton disableRipple={true} sx={{ px: 5, cursor: "default" }}>
-        <Box sx={{ mr: 2 }}>{index + 1}.</Box>
+        <Box sx={{ mr: 2, minWidth: "20px" }}>{index + 1}.</Box>
         <ListItemAvatar>
           <Avatar
             alt={`Avatar}`}
             src={company.img}
             sx={{
               maxWidth: 50,
+              minWidth: 50,
               maxHeight: 50,
               width: "100%",
               height: "100%",
@@ -79,7 +81,22 @@ const CompanyListViewCard = ({
             }}
           />
         </ListItemAvatar>
-        <ListItemText primary={company.name} />
+        {/*<ListItemText primary={company.name} />*/}
+        <ListItemText>
+          <Box sx={{ display: "flex" }}>
+            <Box sx={{ minWidth: "120px" }}>{company.name}</Box>
+            <Box>
+              {company.categories.map((category, index) => (
+                <Chip
+                  key={index}
+                  label={category}
+                  size="small"
+                  variant="outlined"
+                />
+              ))}
+            </Box>
+          </Box>
+        </ListItemText>
         <ListItemSecondaryAction>
           <Button
             id="basic-button"

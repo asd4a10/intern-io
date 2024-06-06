@@ -9,7 +9,6 @@ import ScrollToBottomButton from "../../common/ScrollToBottomButton.tsx";
 import {
   getApplicationStatuses,
   IApplicationStatusType,
-  // clearApplicationStatuses,
 } from "../../../db/indexedDatabase.ts";
 import jsonData from "../../../db/companies.json";
 import CompanyListViewCard from "./CompanyListViewCard.tsx";
@@ -48,11 +47,9 @@ function CompaniesList() {
   const filterStatuses = (
     companyId: number,
   ): IApplicationStatusType | undefined => {
-    const found = applicationStatuses.find(
+    return applicationStatuses.find(
       (application) => application.companyId == companyId,
     );
-    // console.log("found: ", found);
-    return found;
   };
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment

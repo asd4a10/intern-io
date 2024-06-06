@@ -3,5 +3,6 @@ export interface ICompany {
   name: string;
   link: string;
   img: string;
+  categories: string[];
   description: string;
 }
