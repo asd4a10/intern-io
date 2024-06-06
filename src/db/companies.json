@@ -5,6 +5,7 @@
       "name": "Google",
       "link": "https://www.google.com/about/careers/applications/jobs/results/?category=DATA_CENTER_OPERATIONS&category=DEVELOPER_RELATIONS&category=HARDWARE_ENGINEERING&category=INFORMATION_TECHNOLOGY&category=MANUFACTURING_SUPPLY_CHAIN&category=NETWORK_ENGINEERING&category=PRODUCT_MANAGEMENT&category=PROGRAM_MANAGEMENT&category=SOFTWARE_ENGINEERING&category=TECHNICAL_INFRASTRUCTURE_ENGINEERING&category=TECHNICAL_SOLUTIONS&category=TECHNICAL_WRITING&category=USER_EXPERIENCE&jex=ENTRY_LEVEL&target_level=INTERN_AND_APPRENTICE",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/1200px-Google_2015_logo.svg.png",
+      "categories": ["Technology"],
       "description": "Google is a technology company known for its search engine and a wide range of web-related services."
     },
     {
@@ -12,6 +13,7 @@
       "name": "Bloomberg",
       "link": "https://careers.bloomberg.com/job/search",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Bloomberg_logo.svg/2560px-Bloomberg_logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "Bloomberg L.P. is a global financial software, data, and media company."
     },
     {
@@ -19,6 +21,7 @@
       "name": "Apple",
       "link": "https://jobs.apple.com/en-us/search",
       "img": "https://download.logo.wine/logo/Apple_Inc./Apple_Inc.-Logo.wine.png",
+      "categories": ["Technology"],
       "description": "Apple is a multinational technology company known for its hardware, software, and services, including the iPhone, iPad, Mac, and more."
     },
     {
@@ -26,6 +29,7 @@
       "name": "Microsoft",
       "link": "https://jobs.careers.microsoft.com/global/en/search",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Microsoft_logo_%282012%29.svg/2560px-Microsoft_logo_%282012%29.svg.png",
+      "categories": ["Technology"],
       "description": "Microsoft is a global technology company that develops, licenses, and sells computer software, consumer electronics, and personal computers."
     },
     {
@@ -33,6 +37,7 @@
       "name": "Amazon",
       "link": "https://www.amazon.jobs/en/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+      "categories": ["E-commerce"],
       "description": "Amazon is a multinational e-commerce and cloud computing company known for its online retail marketplace and Amazon Web Services (AWS)."
     },
     {
@@ -40,6 +45,7 @@
       "name": "Meta",
       "link": "https://www.metacareers.com/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Meta_Platforms_Inc._logo.svg/2560px-Meta_Platforms_Inc._logo.svg.png",
+      "categories": ["Social Media"],
       "description": "Meta Platforms, formerly Facebook, is a social media and technology company that owns popular platforms like Facebook, Instagram, WhatsApp, and Oculus VR."
     },
     {
@@ -47,6 +53,7 @@
       "name": "Palantir",
       "link": "https://www.palantir.com/careers/#open-positions",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Palantir_Technologies_logo.svg/2560px-Palantir_Technologies_logo.svg.png",
+      "categories": ["Software"],
       "description": "a software company that develops data fusion platforms. The company facilitates machine-assisted and human-driven data analysis."
     },
     {
@@ -54,6 +61,7 @@
       "name": "Citadel",
       "link": "https://www.citadel.com/careers/open-opportunities/students/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Citadel_LLC_Logo.svg/2560px-Citadel_LLC_Logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "a multinational hedge fund with an AUM of >$250B. The firm employs a variety of investment strategies across equities, fixed-income, commodities, credit, and quantitative trading."
     },
     {
@@ -61,6 +69,7 @@
       "name": "TikTok",
       "link": "https://careers.tiktok.com/campus",
       "img": "https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/TikTok_logo.svg/2560px-TikTok_logo.svg.png",
+      "categories": ["Social Media"],
       "description": "a social media app dedicated to short-form videos created for and consumed by users"
     },
     {
@@ -68,6 +77,7 @@
       "name": "ByteDance",
       "link": "https://jobs.bytedance.com/en/campus",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/ByteDance_logo_English.svg/2560px-ByteDance_logo_English.svg.png",
+      "categories": ["Internet Technology"],
       "description": "a global incubator of platforms at the cutting edge of commerce, content, entertainment and enterprise services"
     },
     {
@@ -75,6 +85,7 @@
       "name": "JetBrains",
       "link": "https://internship.jetbrains.com/",
       "img": "https://www.jetbrains.com/company/brand/img/logo6.svg",
+      "categories": ["Software"],
       "description": "a global software company specializing in the creation of intelligent, productivity-enhancing tools for software developers and teams."
     },
     {
@@ -82,6 +93,7 @@
       "name": "NVIDIA",
       "link": "https://nvidia.wd5.myworkdayjobs.com/en-US/NVIDIAExternalCareerSite/jobs?workerSubType=0c40f6bd1d8f10adf6dae42e46d44a17&workerSubType=ab40a98049581037a3ada55b087049b7&jobFamilyGroup=0c40f6bd1d8f10ae43ffaefd46dc7e78",
       "img": "https://www.nvidia.com/content/dam/en-zz/Solutions/about-nvidia/logo-and-brand/01-nvidia-logo-vert-500x200-2c50-d@2x.png",
+      "categories": ["Semiconductors"],
       "description": "global corporation that manufactures graphics processors, mobile technologies, and desktop computers."
     },
     {
@@ -89,6 +101,7 @@
       "name": "IBM",
       "link": "https://www.ibm.com/careers/uk-en/search/?search=Software%20Engineering&filters=level:Entry%20Level,level:Intern,primary_country:AT,primary_country:BE,primary_country:BG,primary_country:HR,primary_country:CZ,primary_country:DK,primary_country:EG,primary_country:FI,primary_country:FR,primary_country:DE,primary_country:GR,primary_country:HU,primary_country:IE,primary_country:IT,primary_country:KE,primary_country:LT,primary_country:MA,primary_country:NL,primary_country:NO,primary_country:PK,primary_country:PL,primary_country:RO,primary_country:SA,primary_country:SK,primary_country:ZA,primary_country:ES,primary_country:SE,primary_country:CH,primary_country:TR,primary_country:AE,primary_country:GB",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/IBM_logo.svg/1280px-IBM_logo.svg.png",
+      "categories": ["Enterprise Software"],
       "description": "a multinational technology company that specialises in producing and selling computer hardware, middleware, and software"
     },
     {
@@ -96,6 +109,7 @@
       "name": "Oracle",
       "link": "https://www.oracle.com/uk/careers/students-grads/programs/",
       "img": "https://businesslearning.com/wp-content/uploads/ultimatemember/166/stream_photo_52d8f25d_9b17db1e153b41136fe86d300d926e85aa01c378.png",
+      "categories": ["Enterprise Software"],
       "description": "Oracle is a multinational computer technology corporation known for its software, cloud solutions, and database management systems. It provides a wide array of products and services for businesses and enterprises."
     },
     {
@@ -103,6 +117,7 @@
       "name": "Cisco",
       "link": "https://jobs.cisco.com/jobs/SearchJobs/software%20engineer?21180=%5B165%5D&21180_format=6022&listFilterMode=1",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1200px-Cisco_logo_blue_2016.svg.png",
+      "categories": ["Technology"],
       "description": "Cisco is a networking hardware, software, and telecommunications equipment company. It is a major player in networking technologies, providing solutions for businesses, governments, and service providers."
     },
     {
@@ -110,6 +125,7 @@
       "name": "Adobe",
       "link": "https://careers.adobe.com/us/en/search-results?keywords=software%20engineer",
       "img": "https://www.annualreports.com/HostedData/CompanyLogos/NASDAQ_ADBE.png",
+      "categories": ["Creative Software"],
       "description": "Adobe is a software company specializing in creative solutions. Its products, including Photoshop, Illustrator, and Acrobat, are widely used in the design, photography, and publishing industries."
     },
     {
@@ -117,6 +133,7 @@
       "name": "Salesforce",
       "link": "https://careers.salesforce.com/en/jobs/?search=software&jobtype=Intern&pagesize=20#results",
       "img": "https://planview-media.s3.us-west-2.amazonaws.com/wp-content/uploads/2022/10/logo-salesforce-png-454.png",
+      "categories": ["Enterprise Software"],
       "description": "Salesforce is a cloud-based customer relationship management (CRM) platform. It provides businesses with tools to manage and analyze customer interactions and is a leader in cloud-based enterprise solutions."
     },
     {
@@ -124,6 +141,7 @@
       "name": "Netflix",
       "link": "https://jobs.netflix.com/search?team=Internship",
       "img": "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png",
+      "categories": ["Streaming Services"],
       "description": "Netflix is an entertainment company offering streaming services for movies, TV shows, and original content. It has revolutionized the way people consume media by popularizing the concept of on-demand streaming."
     },
     {
@@ -131,6 +149,7 @@
       "name": "Uber",
       "link": "https://www.uber.com/us/en/careers/teams/university/",
       "img": "https://www.companieshistory.com/wp-content/uploads/2021/12/Uber-Technologies-Inc-logo.jpg",
+      "categories": ["Transportation"],
       "description": "Uber is a technology company that has transformed the transportation industry with its ride-sharing platform. It also offers food delivery services and is involved in other forms of transportation."
     },
     {
@@ -138,6 +157,7 @@
       "name": "Twitter",
       "link": "https://careers.twitter.com/en",
       "img": "https://static01.nyt.com/images/2014/08/10/magazine/10wmt/10wmt-superJumbo-v4.jpg",
+      "categories": ["Social Media"],
       "description": "Twitter is a social media platform known for its microblogging format. It enables users to share and discover short messages called tweets, making it a popular platform for real-time communication."
     },
     {
@@ -145,6 +165,7 @@
       "name": "Square",
       "link": "https://careers.squareup.com/gb/en/jobs",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Square%2C_Inc._logo.svg/2560px-Square%2C_Inc._logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "Square is a financial services and mobile payment company. It provides tools for businesses to accept payments, manage finances, and offers services such as Square Cash for peer-to-peer payments."
     },
     {
@@ -152,6 +173,7 @@
       "name": "Snap",
       "link": "https://careers.snap.com/ru-RU/jobs?role=Engineering",
       "img": "https://us-east1-aws.api.snapchat.com/web-capture/www.snapchat.com/discover/preview/facebook.png",
+      "categories": ["Social Media"],
       "description": "a multimedia technology company known for its flagship product, Snapchat. It focuses on multimedia messaging and content sharing, with a significant presence among younger demographics."
     },
     {
@@ -159,6 +181,7 @@
       "name": "Tesla",
       "link": "https://www.tesla.com/careers/search/?type=3&site=US",
       "img": "https://1000logos.net/wp-content/uploads/2018/02/Font-Tesla-logo.jpg",
+      "categories": ["Automotive"],
       "description": "Tesla is a pioneering electric vehicle and clean energy company. It designs and manufactures electric cars, energy storage solutions, and solar products, with a mission to accelerate the world's transition to sustainable energy."
     },
     {
@@ -166,6 +189,7 @@
       "name": "HP",
       "link": "https://jobs.hp.com/students-graduates/?category[]=Engineering&job_type[]=Internship",
       "img": "https://logos-world.net/wp-content/uploads/2020/11/Hewlett-Packard-Logo-2008-2014.png",
+      "categories": ["Hardware"],
       "description": "a technology company that produces personal computers, printers, and related accessories. It focuses on innovation in hardware and software to meet the evolving needs of consumers and businesses."
     },
     {
@@ -173,6 +197,7 @@
       "name": "Epic",
       "link": "https://www.epicgames.com/site/en-US/careers/jobs?type=Intern&page=1",
       "img": "https://1000logos.net/wp-content/uploads/2021/12/Epic-Games-logo.png",
+      "categories": ["Video Games"],
       "description": "Epic Games is a video game and software developer. It is known for creating the Unreal Engine and popular games such as Fortnite. Epic Games has a significant impact on the gaming and entertainment industries."
     },
     {
@@ -180,6 +205,7 @@
       "name": "Yelp",
       "link": "https://www.yelp.careers/us/en/search-results",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Yelp_Logo.svg/1280px-Yelp_Logo.svg.png",
+      "categories": ["Online Reviews"],
       "description": "Yelp is an online platform where users can find and review local businesses. It provides crowd-sourced ratings, reviews, and essential information, helping consumers make informed decisions about where to eat, shop, or seek services."
     },
     {
@@ -187,6 +213,7 @@
       "name": "Slack",
       "link": "https://slack.com/intl/en-gb/careers/type/intern-fixed-term#openings",
       "img": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Slack_Technologies_Logo.svg",
+      "categories": ["Business Communication"],
       "description": "Slack is a business communication platform that facilitates team collaboration through channels, messaging, and integrations. It aims to streamline communication and reduce reliance on email."
     },
     {
@@ -194,6 +221,7 @@
       "name": "MongoDB",
       "link": "https://www.mongodb.com/company/careers/students-and-graduates",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/MongoDB_Logo.svg/2560px-MongoDB_Logo.svg.png",
+      "categories": ["Database Software"],
       "description": "software company that develops and provides commercial support for the source-available database MongoDB"
     },
     {
@@ -201,6 +229,7 @@
       "name": "Intel",
       "link": "https://jobs.intel.com/en/search-jobs",
       "img": "https://logos-world.net/wp-content/uploads/2021/09/Intel-Logo-2006-2020-700x394.png",
+      "categories": ["Semiconductors"],
       "description": "A leading semiconductor manufacturer known for processors and other hardware components."
     },
     {
@@ -208,6 +237,7 @@
       "name": "Sony",
       "link": "https://www.sonyjobs.com/jobs.html",
       "img": "https://1000logos.net/wp-content/uploads/2017/06/Sony-Logo-1957.png",
+      "categories": ["Electronics"],
       "description": "a leading provider of audio/video electronics and information technology products for the consumer and professional markets."
     },
     {
@@ -215,6 +245,7 @@
       "name": "Morgan Stanley",
       "link": "https://www.morganstanley.com/careers/career-opportunities-search#",
       "img": "https://1000logos.net/wp-content/uploads/2020/01/Morgan-Stanley-Logo-2001.png",
+      "categories": ["Financial Services"],
       "description": "Morgan Stanley is a financial services corporation that, through its affiliates and subsidiaries, advises, and originates, trades, manages, and distributes capital for institutions, governments, and individuals."
     },
     {
@@ -222,6 +253,7 @@
       "name": "Goldman Sachs",
       "link": "https://www.goldmansachs.com/careers/students/programs/index.html",
       "img": "https://www.goldmansachs.com/a/pgs/images/logo.png",
+      "categories": ["Financial Services"],
       "description": "a leading global investment banking, securities and investment management firm"
     },
     {
@@ -229,6 +261,7 @@
       "name": "Cohere",
       "link": "https://jobs.lever.co/cohere/?",
       "img": "data:image/png;base64,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",
+      "categories": ["Machine Learning"],
       "description": "Cohere is a provider of cutting-edge natural language processing models. The Company provides access to models that read billions of web pages and learn to understand the meaning, sentiment, and intent of the words we use."
     },
     {
@@ -236,6 +269,7 @@
       "name": "Airbnb",
       "link": "https://careers.airbnb.com/positions/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Airbnb_Logo_B%C3%A9lo.svg/1280px-Airbnb_Logo_B%C3%A9lo.svg.png",
+      "categories": ["Online Travel"],
       "description": "Airbnb is a global online marketplace that connects travelers with unique lodging options and experiences, allowing individuals to book accommodations directly from hosts in over 220 countries."
     },
     {
@@ -243,6 +277,7 @@
       "name": "Booking.com",
       "link": "https://careers.booking.com/early-careers/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Booking.com_logo.svg/2560px-Booking.com_logo.svg.png",
+      "categories": ["Online Travel"],
       "description": "Booking.com is a leading online travel agency that enables users to discover and book a wide range of accommodations, including hotels, apartments, and vacation homes, in destinations around the world."
     },
     {
@@ -250,6 +285,7 @@
       "name": "Lyft",
       "link": "https://www.lyft.com/careers/early-talent",
       "img": "https://download.logo.wine/logo/Lyft/Lyft-Logo.wine.png",
+      "categories": ["Transportation"],
       "description": "Lyft is a ride-sharing platform that connects passengers with local drivers through a mobile app. Lyft provides convenient and affordable transportation services in numerous cities."
     },
     {
@@ -257,6 +293,7 @@
       "name": "Stripe",
       "link": "https://stripe.com/jobs/search?teams=University",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Stripe_Logo%2C_revised_2016.svg/2560px-Stripe_Logo%2C_revised_2016.svg.png",
+      "categories": ["Financial Services"],
       "description": "Stripe is a fintech company that provides online payment processing solutions for businesses. It offers a platform that enables businesses to accept and manage online payments."
     },
     {
@@ -264,6 +301,7 @@
       "name": "DeepMind",
       "link": "https://deepmind.google/about/careers/#open-roles",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/DeepMind_logo.png/640px-DeepMind_logo.png",
+      "categories": ["Machine Learning"],
       "description": "DeepMind, a subsidiary of Alphabet Inc., is a prominent artificial intelligence research lab. Specializing in cutting-edge AI technologies, DeepMind's work extends across healthcare, gaming, and various scientific domains."
     },
     {
@@ -271,6 +309,7 @@
       "name": "Hudson River Trading",
       "link": "https://www.hudsonrivertrading.com/student-opportunities/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Hudson_River_Trading_Logo.svg/1200px-Hudson_River_Trading_Logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "Hudson River Trading (HRT) is a leading quantitative trading firm known for its expertise in algorithmic trading and technology-driven financial strategies."
     },
     {
@@ -278,6 +317,7 @@
       "name": "CobbleStone Energy",
       "link": "https://cobblestoneenergy.com/graduates-and-early-careers/",
       "img": "https://s3-recruiting.cdn.greenhouse.io/external_greenhouse_job_boards/logos/400/669/700/original/Cobblestone_Logo-Dark.png?1624448370",
+      "categories": ["Energy"],
       "description": "CobbleStone Energy is a dynamic company focused on the exploration and development of energy resources. Specializing in the extraction and production of oil and gas, CobbleStone Energy utilizes innovative technologies and strategic expertise in the energy sector."
     },
     {
@@ -285,6 +325,7 @@
       "name": "Databricks",
       "link": "https://www.databricks.com/company/careers/open-positions?department=University%20Recruiting&location=all",
       "img": "https://cdn.cookielaw.org/logos/29b588c5-ce77-40e2-8f89-41c4fa03c155/bc546ffe-d1b7-43af-9c0b-9fcf4b9f6e58/1e538bec-8640-4ae9-a0ca-44240b0c1a20/databricks-logo.png",
+      "categories": ["Data Analytics"],
       "description": "Databricks is a leading big data analytics company that provides a unified analytics platform built on Apache Spark."
     },
     {
@@ -292,6 +333,7 @@
       "name": "Coinbase",
       "link": "https://www.coinbase.com/ru/careers/positions?",
       "img": "https://seeklogo.com/images/C/coinbase-new-2021-logo-FA5145228F-seeklogo.com.png",
+      "categories": ["Financial Services"],
       "description": "Coinbase is a prominent cryptocurrency exchange and platform that allows users to buy, sell, and trade a variety of digital assets, providing a user-friendly interface for individuals and institutions to engage in the cryptocurrency market."
     },
     {
@@ -299,6 +341,7 @@
       "name": "Pinterest",
       "link": "https://www.pinterestcareers.com/en/early-career/internship-university-grad-phd-programs/",
       "img": "https://companieslogo.com/img/orig/PINS_BIG-df8ca98a.png?t=1648754641",
+      "categories": ["Social Media"],
       "description": "Pinterest is a visual discovery and social media platform that allows users to discover and save ideas for various projects and interests by creating and curating collections of images, known as \"pins,\" on personalized boards."
     },
     {
@@ -306,6 +349,7 @@
       "name": "JPMorgan",
       "link": "https://careers.jpmorgan.com/us/en/students",
       "img": "https://pacdc.org/2017/wp-content/uploads/2022/03/JP-Morgan-Chase-Logo-1400x788.png",
+      "categories": ["Financial Services"],
       "description": "JPMorgan Chase & Co. is a global financial services firm that operates in banking, asset management, investment banking, and other financial services, serving millions of customers and clients worldwide."
     },
     {
@@ -313,6 +357,7 @@
       "name": "Five Rings",
       "link": "https://fiverings.avature.net/careers/SearchJobs/?523=530&523_format=522&listFilterMode=1&folderRecordsPerPage=25&",
       "img": "https://hmmt-prod.s3.amazonaws.com/static/img/logo/five_rings/logo.png",
+      "categories": ["Financial Services"],
       "description": "Fiverings is a creative production company that specializes in developing and producing video content for brands and businesses."
     },
     {
@@ -320,6 +365,7 @@
       "name": "Mercari",
       "link": "https://careers.mercari.com/job-categories/engineering/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Mercari_logo_2018.svg/2560px-Mercari_logo_2018.svg.png",
+      "categories": ["E-commerce"],
       "description": "Mercari is a mobile marketplace that allows users to buy and sell new or used items, creating a simple and accessible platform for peer-to-peer transactions."
     },
     {
@@ -327,6 +373,7 @@
       "name": "Jump Trading",
       "link": "https://www.jumptrading.com/careers/?titleSearch=campus+intern",
       "img": "https://icoanalytics.org/wp-content/uploads/2022/07/Jump-Trading.png",
+      "categories": ["Financial Services"],
       "description": "Jump Trading is a leading quantitative trading firm specializing in algorithmic and high-frequency trading strategies, leveraging advanced technology and data analysis for financial markets."
     },
     {
@@ -334,6 +381,7 @@
       "name": "Twitch",
       "link": "https://www.twitch.tv/jobs/en/early-career/#intern",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Twitch_logo_%28wordmark_only%29.svg/2560px-Twitch_logo_%28wordmark_only%29.svg.png",
+      "categories": ["Streaming Services"],
       "description": "Twitch is a live streaming platform primarily focused on video game streaming, where users can broadcast their gameplay, interact with viewers, and discover a wide range of gaming content."
     },
     {
@@ -341,6 +389,7 @@
       "name": "Riot Games",
       "link": "https://www.riotgames.com/en/university-programs",
       "img": "https://static-prod.adweek.com/wp-content/uploads/2022/05/Riot-Games-Logo-New-5-16-22.png",
+      "categories": ["Video Games"],
       "description": "Riot Games is a video game developer and publisher known for popular titles like League of Legends, contributing significantly to the global esports industry."
     },
     {
@@ -348,6 +397,7 @@
       "name": "Akuna Capital",
       "link": "https://akunacapital.com/careers#careers",
       "img": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Akuna_Capital.png",
+      "categories": ["Financial Services"],
       "description": "Akuna Capital is a proprietary trading firm that specializes in options market-making and derivatives trading, employing innovative technology and quantitative strategies in financial markets."
     },
     {
@@ -355,6 +405,7 @@
       "name": "DRW",
       "link": "https://drw.com/work-at-drw/listings?filterType=campus&value=Campus",
       "img": "https://crypto.marketswiki.com/images/f/f4/DRW_logo.png",
+      "categories": ["Financial Services"],
       "description": "DRW is a diversified trading firm that engages in proprietary trading and market-making across various asset classes, utilizing advanced technology and quantitative strategies in financial markets."
     },
     {
@@ -362,6 +413,7 @@
       "name": "Two Sigma",
       "link": "https://careers.twosigma.com/careers/SearchJobs/intern?2047=%5B9813823%5D&2047_format=1532&listFilterMode=1",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Two_Sigma_logo.svg/2560px-Two_Sigma_logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "Two Sigma is a technology-driven hedge fund and investment firm that leverages data science and advanced technology to make data-driven investment decisions across various financial markets."
     },
     {
@@ -369,6 +421,7 @@
       "name": "Roblox",
       "link": "https://careers.roblox.com/jobs?disciplines=Early%20Career",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Roblox_Logo_2022.svg/2560px-Roblox_Logo_2022.svg.png",
+      "categories": ["Video Games"],
       "description": "Roblox is a gaming platform and game creation system that allows users to design, play, and share their own immersive 3D experiences, fostering a creative and social gaming community."
     },
     {
@@ -376,6 +429,7 @@
       "name": "Jane street",
       "link": "https://www.janestreet.com/join-jane-street/open-roles/?type=students-and-new-grads&location=london",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Jane_Street_Capital_Logo.svg/1280px-Jane_Street_Capital_Logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "Jane Street is a global proprietary trading firm specializing in quantitative financial trading, using advanced technology and mathematical modeling to navigate various markets."
     },
     {
@@ -383,6 +437,7 @@
       "name": "Capital One",
       "link": "https://jobs.capitalone.co.uk/earlycareers",
       "img": "https://download.logo.wine/logo/Capital_One/Capital_One-Logo.wine.png",
+      "categories": ["Financial Services"],
       "description": "Capital One is a diversified financial services company known for its credit cards, banking, and auto loan services, leveraging technology to provide innovative financial products and solutions to consumers and businesses."
     },
     {
@@ -390,6 +445,7 @@
       "name": "Optiver",
       "link": "https://optiver.com/working-at-optiver/career-opportunities/?numberposts=10&paged=1&tax_query[level]=23&tax_query[department]=29",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Optiver_Logo.svg/2560px-Optiver_Logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "Optiver is a global electronic trading firm specializing in market-making and high-frequency trading across a range of financial instruments, employing advanced technology and quantitative strategies."
     },
     {
@@ -397,6 +453,7 @@
       "name": "D.E. Shaw",
       "link": "https://www.deshaw.com/careers/internships",
       "img": "https://upload.wikimedia.org/wikipedia/commons/6/60/D._E._Shaw_%26_Co._logo.png",
+      "categories": ["Financial Services"],
       "description": "D. E. Shaw & Co. is a global investment and technology development firm known for its quantitative and systematic trading strategies, as well as its involvement in various investment and technology-driven ventures."
     },
     {
@@ -404,6 +461,7 @@
       "name": "Scale AI",
       "link": "https://scale.com/careers#open-roles",
       "img": "https://seeklogo.com/images/S/scale-ai-data-platform-logo-575FFB9F0C-seeklogo.com.png",
+      "categories": ["Machine Learning"],
       "description": "Scale AI, Inc. develops application software. The Company provides training data for AI applications such as self-driving cars, mapping, AR/VR, robotics, and more."
     },
     {
@@ -411,6 +469,7 @@
       "name": "Asana",
       "link": "https://asana.com/ru/jobs/university-recruiting#jobs",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Asana_logo.svg/1024px-Asana_logo.svg.png",
+      "categories": ["Project Management"],
       "description": "Asana is a collaboration and project management platform that helps teams organize and manage their work. It provides tools for task tracking, project planning, and team communication, fostering productivity and efficiency in workplace collaboration."
     },
     {
@@ -418,6 +477,7 @@
       "name": "IMC",
       "link": "https://careers.imc.com/us/en/c/graduates-jobs",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/IMC_Logo.svg/2560px-IMC_Logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "IMC, or IMC Trading, is a global proprietary trading firm that engages in algorithmic trading and market making across various financial instruments"
     },
     {
@@ -425,6 +485,7 @@
       "name": "Robinhood",
       "link": "https://careers.robinhood.com/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Robinhood_%28company%29_logo.svg/2560px-Robinhood_%28company%29_logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "Robinhood is a financial services platform that offers commission-free trading of stocks, exchange-traded funds (ETFs), options, and cryptocurrencies. "
     },
     {
@@ -432,6 +493,7 @@
       "name": "Figma",
       "link": "https://www.figma.com/careers/#job-openings",
       "img": "https://cdn.worldvectorlogo.com/logos/figma-5.svg",
+      "categories": ["Design Tools"],
       "description": "Figma is a cloud-based design and prototyping tool that enables collaboration among designers in real-time."
     },
     {
@@ -439,6 +501,7 @@
       "name": "Confluent",
       "link": "https://careers.confluent.io/search/jobs?q=intern&location=",
       "img": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Confluent_Logo.png",
+      "categories": ["Data Analytics"],
       "description": "Confluent is a technology company specializing in event streaming platforms, most notably built around Apache Kafka."
     },
     {
@@ -446,6 +509,7 @@
       "name": "Doordash",
       "link": "https://careers.doordash.com/university-careers",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/DoorDash_Logo.svg/2560px-DoorDash_Logo.svg.png",
+      "categories": ["Food Delivery"],
       "description": "DoorDash is an on-demand food delivery service that connects users with local restaurants."
     },
     {
@@ -453,6 +517,7 @@
       "name": "Instacart",
       "link": "https://instacart.careers/current-openings/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Instacart_logo_and_wordmark.svg/2560px-Instacart_logo_and_wordmark.svg.png",
+      "categories": ["Food Delivery"],
       "description": "Instacart is an on-demand grocery delivery and pick-up service."
     },
     {
@@ -460,6 +525,7 @@
       "name": "Datadog",
       "link": "https://careers.datadoghq.com/early-careers/",
       "img": "https://cdn.worldvectorlogo.com/logos/datadog-wordmark-1.svg",
+      "categories": ["Cloud Monitoring"],
       "description": "Datadog is a cloud monitoring and analytics platform that provides organizations with comprehensive visibility into their infrastructure, applications, and logs."
     },
     {
@@ -467,6 +533,7 @@
       "name": "Barclays",
       "link": "https://search.jobs.barclays/internships",
       "img": "https://download.logo.wine/logo/Barclays/Barclays-Logo.wine.png",
+      "categories": ["Financial Services"],
       "description": "Barclays is a multinational financial services and banking company headquartered in the United Kingdom."
     },
     {
@@ -474,6 +541,7 @@
       "name": "Visa",
       "link": "https://www.visa.co.uk/en_gb/jobs/?categories=Intern",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Visa_Logo.png/640px-Visa_Logo.png",
+      "categories": ["Financial Services"],
       "description": "Visa is a global payments technology company that facilitates electronic funds transfers throughout the world."
     },
     {
@@ -481,6 +549,7 @@
       "name": "Mastercard",
       "link": "https://careers.mastercard.com/us/en/search-results?keywords=software%20engineer",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "Mastercard is a multinational financial services corporation that facilitates electronic transactions, particularly credit card and debit card payments."
     },
     {
@@ -488,6 +557,7 @@
       "name": "OpenAI",
       "link": "https://openai.com/careers/search?c=engineering",
       "img": "https://tectalic.com/storage/api-logos/2346-openai.svg",
+      "categories": ["Machine Learning"],
       "description": "OpenAI is an artificial intelligence research laboratory."
     },
     {
@@ -495,6 +565,7 @@
       "name": "Softwire",
       "link": "https://online.softwire.com/apply",
       "img": "https://assets-global.website-files.com/5fc66e869d342de866828246/636a3b5663a7d8fd2769abf7_8de5fc0e-3df3-4ecd-9128-62140f50b662.jpeg",
+      "categories": ["Software Development"],
       "description": "Softwire is a UK-based software development company that provides bespoke software solutions, consulting, and IT services."
     },
     {
@@ -502,6 +573,7 @@
       "name": "PayPal",
       "link": "https://careers.pypl.com/university-hiring/university-overview/",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/PayPal_logo.svg/2560px-PayPal_logo.svg.png",
+      "categories": ["Financial Services"],
       "description": "PayPal is a global online payments platform that enables individuals and businesses to make secure financial transactions over the internet. "
     },
     {
@@ -509,6 +581,7 @@
       "name": "Wise",
       "link": "https://www.wise.jobs/search/?t=early-careers&o=&sort=oldest&q=internship",
       "img": "https://d21buns5ku92am.cloudfront.net/69645/images/470456-Frame-c061f4-medium-1677657684.png",
+      "categories": ["Financial Services"],
       "description": "Wise, formerly known as TransferWise, is a financial technology company that provides international money transfer services."
     },
     {
@@ -516,6 +589,7 @@
       "name": "Snowflake",
       "link": "https://careers.snowflake.com/us/en/university",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Snowflake_Logo.svg/1280px-Snowflake_Logo.svg.png",
+      "categories": ["Data Analytics"],
       "description": "Snowflake is a cloud-based data warehousing platform that allows organizations to store and analyze large volumes of data in a scalable and efficient manner."
     },
     {
@@ -523,6 +597,7 @@
       "name": "Dropbox",
       "link": "https://jobs.dropbox.com/teams/emerging-talent#open-positions",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Dropbox_logo_2017.svg/2560px-Dropbox_logo_2017.svg.png",
+      "categories": ["Cloud Storage"],
       "description": "Dropbox is a cloud-based file hosting service that allows users to store and share files, documents, photos, and videos securely."
     },
     {
@@ -530,6 +605,7 @@
       "name": "Spotify",
       "link": "https://www.lifeatspotify.com/students",
       "img": "https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_RGB_Green.png",
+      "categories": ["Music Streaming"],
       "description": "Spotify is a popular music streaming service that provides access to a vast library of songs, podcasts, and other audio content. "
     },
     {
@@ -537,7 +613,32 @@
       "name": "AMD",
       "link": "https://careers.amd.com/careers-home/jobs?page=1&categories=Student%20%2F%20Intern%20%2F%20Temp",
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/AMD_Logo.svg/1200px-AMD_Logo.svg.png",
+      "categories": ["Semiconductors"],
       "description": "Advanced Micro Devices is a multinational semiconductor company. AMD designs and produces microprocessors, graphics processing units (GPUs), and other computing technologies."
+    },
+    {
+      "id": 77,
+      "name": "Notion",
+      "link": "https://www.notion.so/careers",
+      "img": "https://i0.wp.com/get.site/wp-content/uploads/2021/10/notion-logo.png?ssl=1",
+      "categories": ["Productivity Tools"],
+      "description": "Notion is an all-in-one workspace that combines note-taking, project management, and task organization in a single platform."
+    },
+    {
+      "id": 78,
+      "name": "Unity",
+      "link": "https://careers.unity.com/#unity-students",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Unity_Technologies_logo.svg/2560px-Unity_Technologies_logo.svg.png",
+      "categories": ["Game Development"],
+      "description": "Unity Technologies is a leading platform for creating and operating interactive, real-time 3D content."
+    },
+    {
+      "id": 79,
+      "name": "GSA Capital",
+      "link": "https://www.gsacapital.com/join-us#jobs",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/GSA_Capital.svg/1200px-GSA_Capital.svg.png",
+      "categories": ["Financial Services"],
+      "description": "GSA Capital is a quantitative investment firm that specializes in systematic trading strategies across global financial markets."
     }
   ]
 }
