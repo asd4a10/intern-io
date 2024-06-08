@@ -11,7 +11,7 @@ const ScrollToBottomButton = ({
   topRef,
   bottomRef,
 }: ScrollToBottomButtonProps) => {
-  const [showButton, setShowButton] = useState(true);
+  // const [showButton, setShowButton] = useState(true);
   const [direction, setDirection] = useState<"up" | "down">("down");
 
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -37,7 +37,7 @@ const ScrollToBottomButton = ({
         position: "fixed",
         bottom: "3rem",
         right: "3rem",
-        display: showButton ? "flex" : "none",
+        display: "flex",
         alignItems: "center",
         backgroundColor: "rgba(84, 110, 122, 1)",
         color: "white",

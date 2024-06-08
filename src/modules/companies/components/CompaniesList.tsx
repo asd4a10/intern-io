@@ -87,13 +87,12 @@ function CompaniesList() {
     }
   };
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-ignore
   const handleChangeCompaniesView = (
     event: React.SyntheticEvent,
     newValue: string,
   ) => {
     setView(newValue);
+    console.log(event);
     // console.log(companies[0].statusId, event);
   };
 

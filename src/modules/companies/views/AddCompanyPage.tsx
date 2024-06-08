@@ -1,13 +1,8 @@
-import { Alert, TextField } from "@mui/material";
+import { TextField } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import React, { useState } from "react";
-import {
-  addCompanyToFirestore,
-  companiesSize,
-  readCompaniesFirestore,
-} from "../../../configs/firebase.ts";
 
 type FormState = {
   [key: string]: unknown; // Add an index signature
@@ -35,7 +30,6 @@ const AddCompanyPage = () => {
 
   const [formData, setFormData] = useState<formState>(initialFormState);
   const [errors, setErrors] = useState(initialError);
-  const [alert, setAlert] = useState<boolean>(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
@@ -53,25 +47,7 @@ const AddCompanyPage = () => {
   const validateFields = (): boolean => {
     return Object.values(formData).every((value) => value !== "");
   };
-  const handleSubmit = async () => {
-    await readCompaniesFirestore(() => {});
-    const response = await addCompanyToFirestore({
-      ...formData,
-      id: companiesSize,
-    });
-    if (response) {
-      setFormData({
-        name: "",
-        description: "",
-        link: "",
-        img: "",
-      });
-      setAlert(true);
-      setTimeout(() => {
-        setAlert(false);
-      }, 5000);
-    }
-  };
+  const handleSubmit = async () => {};
 
   return (
     <Box
@@ -99,11 +75,11 @@ const AddCompanyPage = () => {
         // autoComplete="off"
       >
         <Typography variant={"h4"}>Add new company!</Typography>
-        {alert && (
-          <Alert severity="success">
-            Company was added successfully, thank you!
-          </Alert>
-        )}
+        {/*{alert && (*/}
+        {/*  <Alert severity="success">*/}
+        {/*    Company was added successfully, thank you!*/}
+        {/*  </Alert>*/}
+        {/*)}*/}
         <TextField
           id="company-add-name"
           // fullWidth={true}

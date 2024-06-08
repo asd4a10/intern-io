@@ -3,7 +3,6 @@ import { initializeApp } from "firebase/app";
 
 // import { getDatabase, onValue, ref } from "firebase/database";
 
-import { ICompany } from "../types/ICompany.ts";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -23,53 +22,3 @@ const firebaseConfig = {
 
 // Initialize Firebase
 export const app = initializeApp(firebaseConfig);
-
-// firestore
-import {
-  getFirestore,
-  collection,
-  getDocs,
-  setDoc,
-  doc,
-  query,
-  orderBy,
-} from "firebase/firestore";
-
-export const firestoreDB = getFirestore(app);
-
-export const addCompanyToFirestore = async (newCompany: ICompany) => {
-  try {
-    await setDoc(
-      doc(firestoreDB, "companies", newCompany.id.toString()),
-      newCompany,
-    );
-    // console.log("Document written with ID: ", newCompany.id);
-    return true;
-  } catch (e) {
-    console.error("Error adding document: ", e);
-    return false;
-  }
-};
-
-export let companiesSize = 0;
-export const readCompaniesFirestore = async (
-  setData: React.Dispatch<React.SetStateAction<ICompany[]>>,
-) => {
-  const q = query(collection(firestoreDB, "companies"), orderBy("id"));
-  // const querySnapshot = await getDocs(collection(firestoreDB, "companies"));
-  const querySnapshot = await getDocs(q);
-  const comps: ICompany[] = [];
-  querySnapshot.forEach((doc) => {
-    // console.log(`${doc.id} => ${doc}`);
-    // console.log(doc.data());
-    comps.push({
-      id: +doc.id,
-      name: doc.get("name"),
-      link: doc.get("link"),
-      img: doc.get("img"),
-      description: doc.get("description"),
-    });
-  });
-  setData(comps);
-  companiesSize = comps.length;
-};
