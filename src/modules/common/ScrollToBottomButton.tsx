@@ -3,34 +3,29 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { Fab } from "@mui/material";
 
 interface ScrollToBottomButtonProps {
-  targetRef: React.RefObject<HTMLDivElement>;
+  topRef: React.RefObject<HTMLDivElement>;
+  bottomRef: React.RefObject<HTMLDivElement>;
 }
 
-const ScrollToBottomButton = ({ targetRef }: ScrollToBottomButtonProps) => {
+const ScrollToBottomButton = ({
+  topRef,
+  bottomRef,
+}: ScrollToBottomButtonProps) => {
   const [showButton, setShowButton] = useState(true);
+  const [direction, setDirection] = useState<"up" | "down">("down");
 
   const buttonRef = useRef<HTMLButtonElement>(null);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     console.log("scroll");
-  //     // const isScrolledToBottom =
-  //     //   window.innerHeight + window.scrollY >= document.body.offsetHeight;
-  //     //
-  //     // setShowButton(!isScrolledToBottom);
-  //   };
-  //   console.log("mounted");
-  //   window.addEventListener("scroll", handleScroll);
-  //
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
-  const handleScrollToBottom = () => {
-    // console.log("ho");
-    targetRef.current?.scrollIntoView({ behavior: "instant" });
-    setShowButton(false);
+  const handleScroll = () => {
+    if (direction == "down") {
+      console.log("direction is down");
+      bottomRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+      setDirection("up");
+    } else {
+      console.log("direction is up");
+      topRef.current?.scrollIntoView({ behavior: "smooth", block: "end" });
+      setDirection("down");
+    }
   };
 
   return (
@@ -49,9 +44,13 @@ const ScrollToBottomButton = ({ targetRef }: ScrollToBottomButtonProps) => {
         // visibility: 0.5,
       }}
       aria-label="scroll"
-      onClick={handleScrollToBottom}
+      onClick={handleScroll}
     >
-      <KeyboardArrowDownIcon />
+      {direction == "down" ? (
+        <KeyboardArrowDownIcon />
+      ) : (
+        <KeyboardArrowDownIcon style={{ transform: "rotate(180deg)" }} />
+      )}
     </Fab>
   );
 };

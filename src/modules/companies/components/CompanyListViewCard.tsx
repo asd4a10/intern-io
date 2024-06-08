@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   Avatar,
   Chip,
@@ -12,31 +12,26 @@ import {
 } from "@mui/material";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import { ICompany } from "../../../types/ICompany.ts";
 import {
-  IApplicationStatusType,
-  updateApplicationStatus,
-  addApplicationStatus,
+  updateCompanyStatus,
+  IDBCompany,
 } from "../../../db/indexedDatabase.ts";
 import statusDictionary, { statusArray } from "../../../db/statusDictionary.ts";
 
 export interface CompanyListViewCardProps {
-  company: ICompany;
+  company: IDBCompany;
   index: number;
-  status: IApplicationStatusType | undefined;
+  updateCompanies: (companyId: number, newStatusId: number) => void;
 }
 
 const CompanyListViewCard = ({
   company,
   index,
-  status,
+  updateCompanies,
 }: CompanyListViewCardProps) => {
-  const [applicationStatus, setApplicationStatus] = useState<number>(0);
-
-  useEffect(() => {
-    // console.log(company.name, company.id, status);
-    if (status) setApplicationStatus(status.statusId);
-  }, [status]);
+  const [applicationStatus, setApplicationStatus] = useState<number>(
+    company.statusId,
+  );
 
   // status application menu
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
@@ -49,12 +44,10 @@ const CompanyListViewCard = ({
   };
 
   const handleSelectStatus = async (newStatusId: number) => {
-    if (status) {
-      await updateApplicationStatus(status.id, newStatusId);
-    } else {
-      await addApplicationStatus(company.id, newStatusId);
-    }
+    await updateCompanyStatus(company.id, newStatusId);
     setApplicationStatus(newStatusId);
+    updateCompanies(company.id, newStatusId);
+    console.log("updated status", company.id, newStatusId);
     handleClose();
   };
 
@@ -104,9 +97,9 @@ const CompanyListViewCard = ({
             aria-haspopup="true"
             aria-expanded={open ? "true" : undefined}
             onClick={handleClick}
-            color="secondary"
+            color={statusDictionary[applicationStatus].color}
           >
-            {statusDictionary[applicationStatus]}
+            {statusDictionary[applicationStatus].value}
           </Button>
           <Menu
             id="basic-menu"
