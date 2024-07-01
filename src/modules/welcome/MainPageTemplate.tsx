@@ -21,7 +21,7 @@ const MainPageTemplate = () => {
         sx={{
           flexGrow: "1",
           pt: "2rem",
-          maxWidth: { xs: "350px", sm: "600px", md: "1200px" },
+          maxWidth: { xs: "380px", sm: "600px", md: "1300px" },
         }}
       >
         <Outlet />

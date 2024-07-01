@@ -46,7 +46,9 @@ export default function Header() {
     <AppBar position="static" sx={{ backgroundColor: "#455A64" }} elevation={0}>
       <Container
         maxWidth="xl"
-        sx={{ maxWidth: { xs: "350px", sm: "600px", md: "1200px" } }}
+        sx={{
+          maxWidth: { xs: "380px", sm: "700px", md: "1200px" },
+        }}
       >
         <Toolbar disableGutters>
           <Button

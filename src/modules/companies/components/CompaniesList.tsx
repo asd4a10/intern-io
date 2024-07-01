@@ -161,7 +161,7 @@ function CompaniesList() {
         </Box>
       )}
       {view == "list" && (
-        <Box>
+        <Box sx={{ mx: { xs: 0, sm: 0, md: "10%", lg: "15%" }, p: 0 }}>
           <Box sx={{ display: "flex", justifyContent: "right", mb: 1 }}>
             <FormControlLabel
               control={
@@ -173,7 +173,7 @@ function CompaniesList() {
               label="Not applied first"
             />
           </Box>
-          <List sx={{ mx: 30, p: 0 }}>
+          <List>
             {sortedCompanies.length > 0 &&
               sortedCompanies.map((company, index) => (
                 <CompanyListViewCard

@@ -55,10 +55,18 @@ const CompanyListViewCard = ({
     <ListItem
       key={company.id}
       disablePadding
-      sx={{ bgcolor: "background.paper", mb: 1 }}
+      sx={{ bgcolor: "background.paper", mb: 1, px: 2 }}
     >
-      <ListItemButton disableRipple={true} sx={{ px: 5, cursor: "default" }}>
-        <Box sx={{ mr: 2, minWidth: "20px" }}>{index + 1}.</Box>
+      <ListItemButton
+        disableRipple={true}
+        sx={{ px: { xs: 0, sm: 3, md: 5 }, cursor: "default" }}
+      >
+        {/*     Ordering index     */}
+        <Box sx={{ mr: { sm: 0, md: 2 }, minWidth: { sm: "0px", md: "20px" } }}>
+          {index + 1}.
+        </Box>
+
+        {/*     Company Logo     */}
         <ListItemAvatar>
           <Avatar
             alt={`Avatar}`}
@@ -67,18 +75,28 @@ const CompanyListViewCard = ({
               maxWidth: 50,
               minWidth: 50,
               maxHeight: 50,
-              width: "100%",
+              // width: "100%",
               height: "100%",
               borderRadius: 0,
               mr: 3,
             }}
           />
         </ListItemAvatar>
-        {/*<ListItemText primary={company.name} />*/}
+
+        {/*     Company Name     */}
         <ListItemText>
           <Box sx={{ display: "flex" }}>
-            <Box sx={{ minWidth: "120px" }}>{company.name}</Box>
-            <Box>
+            <Box
+              sx={{
+                minWidth: "120px",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                whiteSpace: "nowrap",
+              }}
+            >
+              {company.name}
+            </Box>
+            <Box sx={{ ...onlyDesktop }}>
               {company.categories.map((category, index) => (
                 <Chip
                   key={index}
@@ -90,38 +108,45 @@ const CompanyListViewCard = ({
             </Box>
           </Box>
         </ListItemText>
-        <ListItemSecondaryAction>
-          <Button
-            id="basic-button"
-            aria-controls={open ? "basic-menu" : undefined}
-            aria-haspopup="true"
-            aria-expanded={open ? "true" : undefined}
-            onClick={handleClick}
-            color={statusDictionary[applicationStatus].color}
-          >
-            {statusDictionary[applicationStatus].value}
-          </Button>
-          <Menu
-            id="basic-menu"
-            anchorEl={anchorEl}
-            open={open}
-            onClose={handleClose}
-            MenuListProps={{
-              "aria-labelledby": "basic-button",
-            }}
-          >
-            {statusArray.map((obj) => (
-              <MenuItem
-                key={obj.key}
-                onClick={() => handleSelectStatus(obj.key)}
-              >
-                {obj.value}
-              </MenuItem>
-            ))}
-            {/*<MenuItem onClick={handleClose}>Profile</MenuItem>*/}
-            {/*<MenuItem onClick={handleClose}>My account</MenuItem>*/}
-            {/*<MenuItem onClick={handleClose}>Logout</MenuItem>*/}
-          </Menu>
+
+        {/*    Actions Buttons     */}
+        <ListItemSecondaryAction sx={horizontalFlex}>
+          {/*    Application status     */}
+          <Box sx={{ ...onlyDesktop }}>
+            {/*    Application status btn     */}
+            <Button
+              id="application-status-button"
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+              onClick={handleClick}
+              color={statusDictionary[applicationStatus].color}
+            >
+              {statusDictionary[applicationStatus].value}
+            </Button>
+
+            {/*    Application status menu     */}
+            <Menu
+              id="application-status-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              {statusArray.map((obj) => (
+                <MenuItem
+                  key={obj.key}
+                  onClick={() => handleSelectStatus(obj.key)}
+                >
+                  {obj.value}
+                </MenuItem>
+              ))}
+            </Menu>
+          </Box>
+
+          {/*    Career page button     */}
           <Button onClick={() => window.open(company.link, "_blank")}>
             Apply
           </Button>
@@ -132,3 +157,13 @@ const CompanyListViewCard = ({
 };
 
 export default CompanyListViewCard;
+
+const onlyDesktop = {
+  display: { xs: "none", sm: "block" },
+};
+
+const horizontalFlex = {
+  display: "flex",
+  flexDirection: "row",
+  justifyContent: "space-between",
+};
