@@ -7,9 +7,9 @@ import Typography from "@mui/material/Typography";
 // import SuggestionComponent from "./SuggestionComponent.tsx";
 import ScrollToBottomButton from "../../common/ScrollToBottomButton.tsx";
 import {
+  addCompany,
   getCompanies,
   IDBCompany,
-  addCompany,
 } from "../../../db/indexedDatabase.ts";
 import jsonData from "../../../db/companies.json";
 import CompanyListViewCard from "./CompanyListViewCard.tsx";
@@ -21,7 +21,10 @@ function CompaniesList() {
   const [sortedCompanies, setSortedCompanies] = useState<IDBCompany[]>([]);
   const [view, setView] = useState("list");
   const [isDetailsVisible, setIsDetailsVisible] = useState(true);
-  const [isSortEnabled, setIsSortEnabled] = useState(true);
+  const [isSortEnabled, setIsSortEnabled] = useState(() => {
+    const saved = localStorage.getItem("isSortEnabled");
+    return saved ? JSON.parse(saved) : false;
+  });
 
   // check if companies from json file are already in the database
   // if lengths is not same, then add them
@@ -63,13 +66,17 @@ function CompaniesList() {
 
   useEffect(() => {
     sortCompanies();
+    localStorage.setItem("isSortEnabled", JSON.stringify(isSortEnabled));
   }, [isSortEnabled, companies]);
 
   useEffect(() => {
     checkCompanies();
   }, []);
 
-  const companiesComparator = (a: IDBCompany, b: IDBCompany): 0 | -1 | 1 => {
+  const companiesApplicationStatusComparator = (
+    a: IDBCompany,
+    b: IDBCompany,
+  ): 0 | -1 | 1 => {
     // filter companies by their statusId
     // less statusId comes first
     const statusA = a.statusId;
@@ -79,10 +86,26 @@ function CompaniesList() {
     return 0;
   };
 
+  const companiesIdComparator = (a: IDBCompany, b: IDBCompany): 0 | -1 | 1 => {
+    // filter companies by their statusId
+    // less statusId comes first
+    const idA = a.id;
+    const idB = b.id;
+    if (idA < idB) return -1;
+    if (idA > idB) return 1;
+    return 0;
+  };
+
   const sortCompanies = () => {
     console.log("sorting companies...", isSortEnabled, companies.length);
-    if (isSortEnabled && companies.length > 0) {
-      setSortedCompanies([...companies].sort(companiesComparator));
+    if (companies.length > 0) {
+      if (!isSortEnabled) {
+        setSortedCompanies([...companies].sort(companiesIdComparator));
+      } else {
+        setSortedCompanies(
+          [...companies].sort(companiesApplicationStatusComparator),
+        );
+      }
       console.log(companies);
     }
   };
@@ -102,6 +125,7 @@ function CompaniesList() {
 
   return (
     <div ref={companiesListRef}>
+      {/*     Main title    */}
       <Box
         sx={{
           textAlign: "center",
@@ -111,12 +135,15 @@ function CompaniesList() {
           Find your next Internship here!
         </Typography>
       </Box>
+
+      {/*     Company count    */}
       <Box sx={{ my: "1rem", textAlign: "center" }}>
         <Typography variant={"h5"}>
           Among {companies.length} Companies at the moment
         </Typography>
       </Box>
-      {/*<SuggestionComponent />*/}
+
+      {/*   View selection tabs    */}
       <Box sx={{ borderColor: "divider", mb: 2 }}>
         <Tabs
           value={view}
@@ -128,6 +155,8 @@ function CompaniesList() {
           <Tab label="Cards" value="cards" />
         </Tabs>
       </Box>
+
+      {/*     Cards view     */}
       {view == "cards" && (
         <Box>
           <Box sx={{ display: "flex", justifyContent: "right", mb: 1 }}>
@@ -160,6 +189,8 @@ function CompaniesList() {
           </Grid>
         </Box>
       )}
+
+      {/*     List view     */}
       {view == "list" && (
         <Box sx={{ mx: { xs: 0, sm: 0, md: "10%", lg: "15%" }, p: 0 }}>
           <Box sx={{ display: "flex", justifyContent: "right", mb: 1 }}>
@@ -186,6 +217,8 @@ function CompaniesList() {
           </List>
         </Box>
       )}
+
+      {/*     Scroll button     */}
       <ScrollToBottomButton topRef={topRef} bottomRef={bottomRef} />
       <div ref={bottomRef}></div>
     </div>
