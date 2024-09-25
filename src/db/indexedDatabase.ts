@@ -70,6 +70,9 @@ export const addCompany = async (company: IDBCompany) => {
   return companyDB.companies.add(company);
 };
 
+export const updateCompany = async (company: IDBCompany) => {
+  return companyDB.companies.put(company);
+};
 export const getCompanies = async () => {
   return companyDB.companies.toArray();
 };

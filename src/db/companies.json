@@ -639,6 +639,175 @@
       "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/GSA_Capital.svg/1200px-GSA_Capital.svg.png",
       "categories": ["Financial Services"],
       "description": "GSA Capital is a quantitative investment firm that specializes in systematic trading strategies across global financial markets."
+    },
+    {
+      "id": 80,
+      "name": "Airbus",
+      "link": "https://www.airbus.com/careers/students-graduates.html",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Airbus_logo_2017.png/1200px-Airbus_logo_2017.png",
+      "categories": ["Aerospace"],
+      "description": "Airbus is a multinational aerospace corporation that designs, manufactures, and sells commercial and military aircraft, helicopters, satellites, and related systems."
+    },
+    {
+      "id": 81,
+      "name": "Yandex",
+      "link": "https://yandex.ru/yaintern",
+      "img": "https://cdn.freebiesupply.com/logos/large/2x/yandex-2-logo-png-transparent.png",
+      "categories": ["Technology"],
+      "description": "Yandex is a Russian multinational corporation that specializes in internet-related products and services, including search engines, online advertising, e-commerce, and more."
+    },
+    {
+      "id": 82,
+      "name": "Github",
+      "link": "https://www.github.careers/early-in-career",
+      "img": "https://pngimg.com/uploads/github/github_PNG23.png",
+      "categories": ["Technology"],
+      "description": "GitHub is a web-based platform for version control and collaboration using Git. It provides hosting for software development and version control using Git."
+    },
+    {
+      "id": 83,
+      "name": "Atlassian",
+      "link": "https://www.atlassian.com/company/careers/students",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Atlassian-logo.svg/2560px-Atlassian-logo.svg.png",
+      "categories": ["Software Development"],
+      "description": "Atlassian is an Australian software company that develops products for software developers, project managers, and content management."
+    },
+    {
+      "id": 84,
+      "name": "Zoom",
+      "link": "https://zoom.wd5.myworkdayjobs.com/Zoom/jobs",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/2/24/Zoom-Logo.png",
+      "categories": ["Video Conferencing"],
+      "description": "Zoom Video Communications is a video conferencing platform that provides remote communication services, including video conferencing, online meetings, and webinars."
+    },
+    {
+      "id": 85,
+      "name": "Zynga",
+      "link": "https://www.zynga.com/careers/university",
+      "img": "https://logos-world.net/wp-content/uploads/2023/05/Zynga-Logo.png",
+      "categories": ["Video Games"],
+      "description": "Zynga is a mobile game developer known for popular titles like FarmVille, Words with Friends, and Zynga Poker."
+    },
+    {
+      "id": 86,
+      "name": "Revolut",
+      "link": "https://www.revolut.com/careers/",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/c/c9/Logo_Revolut.png",
+      "categories": ["Financial Services"],
+      "description": "Revolut is a financial technology company that offers banking services, including currency exchange, debit cards, and peer-to-peer payments, through its mobile app."
+    },
+    {
+      "id": 87,
+      "name": "Twilio",
+      "link": "https://www.twilio.com/company/jobs",
+      "img": "https://w7.pngwing.com/pngs/172/286/png-transparent-twilio-hd-logo.png",
+      "categories": ["Cloud Communications"],
+      "description": "Twilio is a cloud communications platform that enables developers to integrate voice, messaging, and video capabilities into their applications."
+    },
+    {
+      "id": 88,
+      "name": "Cloudflare",
+        "link": "https://www.cloudflare.com/en-gb/careers/early-talent/",
+        "img": "https://download.logo.wine/logo/Cloudflare/Cloudflare-Logo.wine.png",
+        "categories": ["Cybersecurity"],
+        "description": "Cloudflare is a web infrastructure and website security company that provides content delivery network (CDN) services, DDoS mitigation, and internet security solutions."
+    },
+    {
+      "id": 89,
+      "name": "Red Hat",
+        "link": "https://www.redhat.com/en/jobs",
+        "img": "https://download.logo.wine/logo/Red_Hat/Red_Hat-Logo.wine.png",
+        "categories": ["Software Development"],
+        "description": "Red Hat is an American multinational software company that provides open-source software products to enterprises. Red Hat is known for its Linux distribution, Red Hat Enterprise Linux, and its contributions to open-source projects."
+    },
+    {
+      "id": 90,
+      "name": "Huawei",
+        "link": "https://career.huawei.com/reccampportal/portal5/campus-recruitment.html?jobTypes=7#jobList",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Huawei_logo_icon_170010.png",
+        "categories": ["Technology"],
+        "description": "Huawei is a Chinese multinational technology company that provides telecommunications equipment and consumer electronics. Huawei is a leading global provider of information and communications technology (ICT) infrastructure and smart devices."
+    },
+    {
+      "id": 91,
+      "name": "Square Enix",
+        "link": "https://www.jp.square-enix.com/recruit/career/",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Square_Enix_logo.svg/1200px-Square_Enix_logo.svg.png",
+        "categories": ["Video Games"],
+        "description": "Square Enix is a Japanese video game developer and publisher known for popular franchises like Final Fantasy, Dragon Quest, and Kingdom Hearts."
+    },
+    {
+      "id": 92,
+      "name": "Shopify",
+        "link": "https://www.shopify.com/careers/students",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Shopify_Logo.png/640px-Shopify_Logo.png",
+        "categories": ["E-commerce"],
+        "description": "Shopify is a leading e-commerce platform that allows businesses to create online stores and sell products online."
+    },
+    {
+      "id": 93,
+      "name": "Elastic",
+        "link": "https://www.elastic.co/about/careers",
+        "img": "https://cdn.freebiesupply.com/logos/large/2x/elastic-logo-png-transparent.png",
+        "categories": ["Data Analytics"],
+        "description": "Elastic is a search company that builds self-managed and SaaS offerings that make data usable in real time and at scale for use cases like application search, site search, enterprise search, logging, APM, metrics, security, business analytics, and many more."
+    },
+    {
+      "id": 94,
+      "name": "Garmin",
+        "link": "https://careers.garmin.com/careers-home/",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/a/a6/Garmin_logo_2006.svg",
+        "categories": ["Technology"],
+        "description": "Garmin is a multinational technology company that specializes in GPS technology for automotive, aviation, marine, outdoor, and sports activities."
+    },
+    {
+      "id": 95,
+      "name": "SpaceX",
+        "link": "https://www.spacex.com/careers/",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/9/96/SpaceX_Logo_Black.png",
+        "categories": ["Aerospace"],
+        "description": "SpaceX is an American aerospace manufacturer and space transportation company founded by Elon Musk. SpaceX is known for its ambitious goals of reducing the cost of space travel and enabling the colonization of Mars."
+
+    },
+    {
+      "id": 96,
+      "name": "Dell Technologies",
+      "link": "https://jobs.dell.com/students",
+      "img": "https://download.logo.wine/logo/Dell_Technologies/Dell_Technologies-Logo.wine.png",
+      "categories": ["Technology"],
+      "description": "Dell Technologies is a multinational technology company that develops, sells, repairs, and supports computers and related products and services."
+    },
+    {
+      "id": 97,
+      "name": "Miro",
+      "link": "https://miro.com/careers/open-positions/",
+      "img": "https://e7.pngegg.com/pngimages/441/29/png-clipart-miro-logo-landscape-tech-companies.png",
+      "categories": ["Productivity Tools"],
+      "description": "Miro is a visual collaboration platform that enables teams to work together on a digital whiteboard, fostering creativity, ideation, and collaboration in a virtual environment."
+    },
+    {
+      "id": 98,
+      "name": "Siemens",
+      "link": "https://jobs.siemens.com/careers?utm_source=j_c_global",
+      "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Siemens-logo.svg/1024px-Siemens-logo.svg.png",
+      "categories": ["Technology"],
+      "description": "Siemens is a German multinational conglomerate that focuses on electrification, automation, and digitalization in various industries."
+    },
+    {
+      "id": 99,
+      "name": "Nokia",
+      "link": "https://www.nokia.com/about-us/careers/student-and-graduate-opportunities/",
+      "img": "https://cdn.worldvectorlogo.com/logos/nokia-new-logo-2023-png-vector.svg",
+      "categories": ["Technology"],
+      "description": "Nokia is a multinational telecommunications, information technology, and consumer electronics company."
+    },
+    {
+      "id": 100,
+      "name": "Box",
+      "link": "https://box.eightfold.ai/careers?location=any&pid=584129833828&country=London%2C%20England%2C%20UK&country=London%2C%20England%2C%20United%20Kingdom&Region=EMEA&domain=box.com&sort_by=relevance&triggerGoButton=false",
+      "img": "https://seeklogo.com/images/B/box-logo-BF13409756-seeklogo.com.png",
+      "categories": ["Cloud Storage"],
+      "description": "Box is a cloud content management and file sharing service for businesses."
     }
   ]
 }

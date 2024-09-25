@@ -10,6 +10,7 @@ import {
   addCompany,
   getCompanies,
   IDBCompany,
+  updateCompany,
 } from "../../../db/indexedDatabase.ts";
 import jsonData from "../../../db/companies.json";
 import CompanyListViewCard from "./CompanyListViewCard.tsx";
@@ -46,7 +47,21 @@ function CompaniesList() {
         }
       });
     } else {
-      console.log("companies already in the database");
+      let comp = "";
+      jsonData.companies.forEach(async (company: ICompany) => {
+        comp += company.name + " ";
+        const companyExists = companies.find(
+          (c: ICompany) => c.id == company.id,
+        );
+        if (!companyExists) {
+          await addCompany({ ...company, statusId: 0 });
+        } else {
+          await updateCompany({ ...company, statusId: companyExists.statusId });
+        }
+      });
+      setTimeout(() => {
+        console.log("Companies already exist in the database: ", comp);
+      }, 1000);
     }
     setCompanies(await getCompanies());
   };
